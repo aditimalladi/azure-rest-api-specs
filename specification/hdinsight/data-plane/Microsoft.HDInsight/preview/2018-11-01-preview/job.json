@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "HDInsightJobClient",
+    "title": "HDInsightJobManagementClient",
     "description": "The HDInsight Job Client.",
     "version": "2018-11-01-preview",
     "x-ms-code-generation-settings": {
@@ -9,10 +9,10 @@
     }
   },
   "x-ms-parameterized-host": {
-    "hostTemplate": "{endpoint}",
+    "hostTemplate": "{clusterDnsName}",
     "parameters": [
       {
-        "$ref": "#/parameters/endpointParameter"
+        "$ref": "#/parameters/clusterDnsNameParameter"
       }
     ]
   },
@@ -911,13 +911,13 @@
     }
   },
   "parameters": {
-    "endpointParameter": {
-      "name": "endpoint",
+    "clusterDnsNameParameter": {
+      "name": "clusterDnsName",
       "in": "path",
       "required": true,
       "type": "string",
       "x-ms-skip-url-encoding": true,
-      "description": "The cluster endpoint, for example https://clustername.azurehdinsight.net.",
+      "description": "The cluster dns name against which the job management is to be.",
       "x-ms-parameter-location": "client"
     },
     "UserNameParameter": {

@@ -7,7 +7,7 @@
     "parameters": {
       "properties": {
         "administratorLogin": "dummylogin",
-        "administratorLoginPassword": "<administratorLoginPassword>"
+        "administratorLoginPassword": "Un53cuRE!"
       },
       "location": "Japan East"
     }

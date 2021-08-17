@@ -5,6 +5,7 @@
     "resourceGroupName": "my-resource-group",
     "resourceName": "my-component",
     "InsightProperties": {
+      "name": "my-component",
       "location": "South Central US",
       "kind": "web",
       "tags": {
@@ -37,12 +38,7 @@
           "HockeyAppId": "",
           "HockeyAppToken": "",
           "provisioningState": "Succeeded",
-          "SamplingPercentage": 100.0,
-          "RetentionInDays": 90,
-          "ConnectionString": "InstrumentationKey=bc095013-3cf2-45ac-ab47-123456789abc",
-          "DisableIpMasking": false,
-          "ImmediatePurgeDataOn30Days": false,
-          "IngestionMode": "ApplicationInsights"
+          "SamplingPercentage": 100.0
         }
       }
     }

@@ -59,7 +59,8 @@
             }
           ]
         }
-      }
+      },
+      "name": "myVM"
     }
   },
   "responses": {

@@ -115,6 +115,7 @@
                   }
                 }
               ],
+              "outboundRules": [],
               "inboundNatPools": []
             }
           },
@@ -130,6 +131,7 @@
               "loadBalancingRules": [],
               "probes": [],
               "inboundNatRules": [],
+              "outboundRules": [],
               "inboundNatPools": []
             }
           }

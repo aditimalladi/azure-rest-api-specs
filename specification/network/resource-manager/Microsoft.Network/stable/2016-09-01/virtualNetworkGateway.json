@@ -1299,7 +1299,7 @@
         },
         "messagesReceived": {
           "type": "integer",
-          "format": "int64",
+          "format": "in64",
           "readOnly": true,
           "description": "The number of BGP messages received"
         }

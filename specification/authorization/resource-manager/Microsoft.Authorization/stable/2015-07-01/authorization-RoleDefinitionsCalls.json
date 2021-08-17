@@ -43,13 +43,17 @@
         "description": "Gets all permissions the caller has for a resource group.",
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ResourceGroupNameParameter"
+            "name": "resourceGroupName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The name of the resource group to get the permissions for. The name is case insensitive."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -58,19 +62,13 @@
             "schema": {
               "$ref": "#/definitions/PermissionGetResult"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-pageable": {
           "nextLinkName": "nextLink"
         },
         "x-ms-examples": {
-          "List permissions for resource group": {
+          "GetConfigurations": {
             "$ref": "./examples/GetPermissions.json"
           }
         }
@@ -85,7 +83,11 @@
         "description": "Gets all permissions the caller has for a resource.",
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ResourceGroupNameParameter"
+            "name": "resourceGroupName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The name of the resource group containing the resource. The name is case insensitive."
           },
           {
             "name": "resourceProviderNamespace",
@@ -118,10 +120,10 @@
             "description": "The name of the resource to get the permissions for."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -130,19 +132,13 @@
             "schema": {
               "$ref": "#/definitions/PermissionGetResult"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-pageable": {
           "nextLinkName": "nextLink"
         },
         "x-ms-examples": {
-          "List permissions for resource": {
+          "GetConfigurations": {
             "$ref": "./examples/GetResourcePermissions.json"
           }
         }
@@ -172,7 +168,7 @@
             "description": "The ID of the role definition to delete."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -181,19 +177,10 @@
             "schema": {
               "$ref": "#/definitions/RoleDefinition"
             }
-          },
-          "204": {
-            "description": "Role definition already deleted or does not exist."
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-examples": {
-          "Delete role definition": {
+          "GetConfigurations": {
             "$ref": "./examples/DeleteRoleDefinition.json"
           }
         }
@@ -221,7 +208,7 @@
             "description": "The ID of the role definition."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -230,16 +217,10 @@
             "schema": {
               "$ref": "#/definitions/RoleDefinition"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-examples": {
-          "Get role definition by name": {
+          "GetConfigurations": {
             "$ref": "./examples/GetRoleDefinitionByName.json"
           }
         }
@@ -276,7 +257,7 @@
             "description": "The values for the role definition."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -285,16 +266,10 @@
             "schema": {
               "$ref": "#/definitions/RoleDefinition"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-examples": {
-          "Create role definition": {
+          "GetConfigurations": {
             "$ref": "./examples/PutRoleDefinition.json"
           }
         }
@@ -324,7 +299,7 @@
             "description": "The filter to apply on the operation. Use atScopeAndBelow filter to search below the given scope as well."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -333,12 +308,6 @@
             "schema": {
               "$ref": "#/definitions/RoleDefinitionListResult"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-pageable": {
@@ -346,7 +315,7 @@
         },
         "x-ms-odata": "#/definitions/RoleDefinitionFilter",
         "x-ms-examples": {
-          "List role definitions for scope": {
+          "GetConfigurations": {
             "$ref": "./examples/GetRoleDefinitionAtScope.json"
           }
         }
@@ -369,7 +338,7 @@
             "x-ms-skip-url-encoding": true
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -378,16 +347,10 @@
             "schema": {
               "$ref": "#/definitions/RoleDefinition"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-examples": {
-          "Get role definition by ID": {
+          "GetConfigurations": {
             "$ref": "./examples/GetRoleDefinitionById.json"
           }
         }
@@ -513,5 +476,20 @@
       "description": "Role definition permissions."
     }
   },
-  "parameters": {}
+  "parameters": {
+    "SubscriptionIdParameter": {
+      "name": "subscriptionId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "The ID of the target subscription."
+    },
+    "ApiVersionParameter": {
+      "name": "api-version",
+      "in": "query",
+      "required": true,
+      "type": "string",
+      "description": "The API version to use for this operation."
+    }
+  }
 }

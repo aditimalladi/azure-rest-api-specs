@@ -5,9 +5,7 @@
     "resourceName": "myIoTCentralApp",
     "api-version": "2018-09-01",
     "AppPatch": {
-      "properties": {
-        "displayName": "My IoT Central App 2"
-      }
+      "displayName": "My IoT Central App 2"
     }
   },
   "responses": {

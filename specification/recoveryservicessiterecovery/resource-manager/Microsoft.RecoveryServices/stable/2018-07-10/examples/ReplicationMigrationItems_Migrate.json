@@ -10,8 +10,7 @@
     "migrateInput": {
       "properties": {
         "providerSpecificDetails": {
-          "instanceType": "VMwareCbt",
-          "performShutdown": "true"
+          "instanceType": "VMwareCbt"
         }
       }
     }

@@ -22,9 +22,8 @@
       },
       "body": {
         "properties": {
-          "userName": "John Smith",
-          "createdAt": "2018-11-14T04:47:52.9614956Z",
-          "userEmail": "johnsmith@microsoft.com"
+          "createdBy": "johnsmith@microsoft.com",
+          "createdAt": "2018-11-14T04:47:52.9614956Z"
         },
         "location": "West US 2",
         "tags": {
@@ -36,7 +35,7 @@
         },
         "id": "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1",
         "name": "Account1",
-        "type": "Microsoft.DataShare/accounts"
+        "type": "Microsoft.DataShare/Accounts"
       }
     }
   }

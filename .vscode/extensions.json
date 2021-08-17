@@ -1,7 +1,6 @@
 {
-  "recommendations": [
-    "EditorConfig.EditorConfig",
-    "esbenp.prettier-vscode",
-    "docsmsft.docs-authoring-pack"
-  ]
+    "recommendations": [
+        "EditorConfig.EditorConfig",
+        "docsmsft.docs-authoring-pack"
+    ]
 }

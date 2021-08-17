@@ -5,12 +5,12 @@
 Configuration for generating LUIS Authoring SDK.
 
 ``` yaml
-tag: authoring_3_0
+tag: authoring_2_0
 add-credentials: true
 openapi-type: data-plane
 ```
 
-The current release for the Authoring Endpoint is `authoring_3_0`.
+The current release for the Authoring Endpoint is `authoring_2_0`.
 
 # Releases
 
@@ -47,64 +47,10 @@ directive:
   - suppress: DefinitionsPropertiesNamesCamelCase
     reason: Changing casing will break existing clients/consumers
 ```
----
-
-## Authoring 3.0-preview
-These settings apply only when `--tag=authoring_3_0_preview` is specified on the command line.
-
-``` yaml $(tag) == 'authoring_3_0_preview'
-input-file: preview/v3.0/LUIS-Authoring.json
-```
-
-Deprecated Pattern's Operations
-
-``` yaml $(tag) == 'authoring_2_0'
-directive:
-  - reason: Deprecated
-    remove-operation: Features_GetApplicationVersionPatternFeatures
-  - reason: Deprecated
-    remove-operation: Features_CreatePatternFeature
-  - reason: Deprecated
-    remove-operation: Features_GetPatternFeatureInfo
-  - reason: Deprecated
-    remove-operation: Features_UpdatePatternFeature
-  - reason: Deprecated
-    remove-operation: Features_DeletePatternFeature
-```
-
-AutoRest-Linter Suppressions
-
-``` yaml
-# Ignore autorest-linter issues that cannot be resolve without updates to the API implementation
-directive:
-  - suppress: DeleteMustNotHaveRequestBody
-    reason: Body is used to specify entity to delete
-  - suppress: DefinitionsPropertiesNamesCamelCase
-    reason: Changing casing will break existing clients/consumers
-```
----
-
-## Authoring 3.0
-These settings apply only when `--tag=authoring_3_0` is specified on the command line.
-
-``` yaml $(tag) == 'authoring_3_0'
-input-file: stable/v3.0/LUIS-Authoring.json
-```
-
-AutoRest-Linter Suppressions
-
-``` yaml
-# Ignore autorest-linter issues that cannot be resolve without updates to the API implementation
-directive:
-  - suppress: DeleteMustNotHaveRequestBody
-    reason: Body is used to specify entity to delete
-  - suppress: DefinitionsPropertiesNamesCamelCase
-    reason: Changing casing will break existing clients/consumers
-```
 
 ---
-
 # Code Generation
+
 
 ## Swagger to SDK
 
@@ -113,12 +59,13 @@ This is not used by Autorest itself.
 
 ``` yaml $(swagger-to-sdk)
 swagger-to-sdk:
+  - repo: azure-sdk-for-go
   - repo: azure-sdk-for-python
   - repo: azure-sdk-for-js
   - repo: azure-sdk-for-node
 ```
 
-### CSharp Settings
+### Authoring 2.0 - CSharp Settings
 These settings apply only when `--csharp` is specified on the command line.
 ``` yaml $(csharp)
 csharp:
@@ -163,7 +110,6 @@ require: $(this-folder)/../../../../../profiles/readme.md
 # all the input files across all versions
 input-file:
   - $(this-folder)/stable/v2.0/LUIS-Authoring.json
-  - $(this-folder)/preview/v3.0/LUIS-Authoring.json
 
 ```
 
@@ -174,3 +120,4 @@ uncomment the  `exclude-file` section below and add the file paths.
 #exclude-file: 
 #  - $(this-folder)/Microsoft.Example/stable/2010-01-01/somefile.json
 ```
+

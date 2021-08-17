@@ -73,7 +73,7 @@
                   "type": "ip"
                 }
               ],
-              "correlationKey": "<correlationKey>"
+              "correlationKey": "Rkso6LFWxzCll5tqrk4hnrBJ+MY1BX806W6q6+0s9Jk="
             }
           },
           {
@@ -162,7 +162,7 @@
                   "type": "process"
                 }
               ],
-              "correlationKey": "<correlationKey>"
+              "correlationKey": "CCso6LFWxzCll5tqrk4hnrBJ+MY1BX806W6q6+0sWqs="
             }
           }
         ]

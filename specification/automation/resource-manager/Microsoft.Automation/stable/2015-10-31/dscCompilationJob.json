@@ -64,7 +64,7 @@
             "required": true,
             "type": "string",
             "format": "uuid",
-            "description": "The DSC configuration Id."
+            "description": "The the DSC configuration Id."
           },
           {
             "name": "parameters",

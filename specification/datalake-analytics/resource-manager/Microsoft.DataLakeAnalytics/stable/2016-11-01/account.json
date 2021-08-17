@@ -3,7 +3,10 @@
   "info": {
     "title": "DataLakeAnalyticsAccountManagementClient",
     "description": "Creates an Azure Data Lake Analytics account management client.",
-    "version": "2016-11-01"
+    "version": "2016-11-01",
+    "x-ms-code-generation-settings": {
+      "internalConstructors": true
+    }
   },
   "host": "management.azure.com",
   "schemes": [
@@ -101,12 +104,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeAnalyticsAccountListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -190,12 +187,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeAnalyticsAccountListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -251,12 +242,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeAnalyticsAccount"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -292,12 +277,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeAnalyticsAccount"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -353,12 +332,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeAnalyticsAccount"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -397,12 +370,6 @@
           },
           "204": {
             "description": "The specified account was not found."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -486,12 +453,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeStoreAccountInformationListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -544,12 +505,6 @@
         "responses": {
           "200": {
             "description": "Successfully added the specified Azure Data Lake Store account information."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -591,12 +546,6 @@
             "schema": {
               "$ref": "#/definitions/DataLakeStoreAccountInformation"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -635,12 +584,6 @@
         "responses": {
           "200": {
             "description": "Successfully removed the specified Azure Data Lake Store account information from the specified Azure Data Lake Analytics account."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -723,12 +666,6 @@
             "schema": {
               "$ref": "#/definitions/StorageAccountInformationListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -782,12 +719,6 @@
         "responses": {
           "200": {
             "description": "Successfully added the specified Azure Storage account information to the specified Azure Data Lake Analytics account."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -829,12 +760,6 @@
             "schema": {
               "$ref": "#/definitions/StorageAccountInformation"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -882,12 +807,6 @@
         "responses": {
           "200": {
             "description": "Successfully update the specified Azure Storage account information for the specified Azure Data Lake Analytics account."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -926,12 +845,6 @@
         "responses": {
           "200": {
             "description": "Successfully deleted the specified Azure Storage account information from the Azure Data Lake Analytics account."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -975,12 +888,6 @@
             "schema": {
               "$ref": "#/definitions/StorageContainerListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1034,12 +941,6 @@
             "schema": {
               "$ref": "#/definitions/StorageContainer"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1090,12 +991,6 @@
             "schema": {
               "$ref": "#/definitions/SasTokenInformationListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1135,12 +1030,6 @@
             "schema": {
               "$ref": "#/definitions/ComputePolicyListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1196,12 +1085,6 @@
             "schema": {
               "$ref": "#/definitions/ComputePolicy"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1243,12 +1126,6 @@
             "schema": {
               "$ref": "#/definitions/ComputePolicy"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1299,12 +1176,6 @@
             "schema": {
               "$ref": "#/definitions/ComputePolicy"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1346,12 +1217,6 @@
           },
           "204": {
             "description": "The specified compute policy does not exist or was already deleted."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1388,12 +1253,6 @@
             "schema": {
               "$ref": "#/definitions/FirewallRuleListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1449,12 +1308,6 @@
             "schema": {
               "$ref": "#/definitions/FirewallRule"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1496,12 +1349,6 @@
             "schema": {
               "$ref": "#/definitions/FirewallRule"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1552,12 +1399,6 @@
             "schema": {
               "$ref": "#/definitions/FirewallRule"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1599,12 +1440,6 @@
           },
           "204": {
             "description": "The specified firewall rule does not exist or was already deleted."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1632,12 +1467,6 @@
             "schema": {
               "$ref": "#/definitions/OperationListResult"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1678,12 +1507,6 @@
           },
           "404": {
             "description": "Subscription not found."
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1730,12 +1553,6 @@
             "schema": {
               "$ref": "#/definitions/NameAvailabilityInformation"
             }
-          },
-          "default": {
-            "schema": {
-              "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ErrorResponse"
-            },
-            "description": ""
           }
         },
         "x-ms-examples": {
@@ -1752,7 +1569,7 @@
         "id": {
           "readOnly": true,
           "type": "string",
-          "description": "The resource identifier."
+          "description": "The resource identifer."
         },
         "name": {
           "readOnly": true,
@@ -1854,13 +1671,6 @@
           },
           "description": "The list of Data Lake Store accounts associated with this account."
         },
-        "publicDataLakeStoreAccounts": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/DataLakeStoreAccountInformation"
-          },
-          "description": "The list of Data Lake Store accounts associated with this account."
-        },
         "storageAccounts": {
           "readOnly": true,
           "type": "array",
@@ -1877,22 +1687,6 @@
           },
           "description": "The list of compute policies associated with this account."
         },
-        "hiveMetastores": {
-          "readOnly": true,
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/HiveMetastore"
-          },
-          "description": "The list of hiveMetastores associated with this account."
-        },
-        "virtualNetworkRules": {
-          "readOnly": true,
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/VirtualNetworkRule"
-          },
-          "description": "The list of virtualNetwork rules associated with this account."
-        },
         "firewallRules": {
           "readOnly": true,
           "type": "array",
@@ -1902,6 +1696,7 @@
           "description": "The list of firewall rules associated with this account."
         },
         "firewallState": {
+          "readOnly": true,
           "type": "string",
           "enum": [
             "Enabled",
@@ -1914,6 +1709,7 @@
           "description": "The current state of the IP address firewall for this account."
         },
         "firewallAllowAzureIps": {
+          "readOnly": true,
           "type": "string",
           "enum": [
             "Enabled",
@@ -1926,6 +1722,7 @@
           "description": "The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced."
         },
         "newTier": {
+          "readOnly": true,
           "type": "string",
           "enum": [
             "Consumption",
@@ -1965,29 +1762,12 @@
           "description": "The commitment tier in use for the current month."
         },
         "maxJobCount": {
+          "readOnly": true,
           "type": "integer",
           "format": "int32",
           "minimum": 1,
           "default": 3,
           "description": "The maximum supported jobs running under the account at the same time."
-        },
-        "maxActiveJobCountPerUser": {
-          "readOnly": true,
-          "type": "integer",
-          "format": "int32",
-          "description": "The maximum supported active jobs under the account at the same time."
-        },
-        "maxQueuedJobCountPerUser": {
-          "readOnly": true,
-          "type": "integer",
-          "format": "int32",
-          "description": "The maximum supported jobs queued under the account at the same time."
-        },
-        "maxJobRunningTimeInMin": {
-          "readOnly": true,
-          "type": "integer",
-          "format": "int32",
-          "description": "The maximum supported active jobs under the account at the same time."
         },
         "systemMaxJobCount": {
           "readOnly": true,
@@ -1996,6 +1776,7 @@
           "description": "The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account."
         },
         "maxDegreeOfParallelism": {
+          "readOnly": true,
           "type": "integer",
           "format": "int32",
           "minimum": 1,
@@ -2009,6 +1790,7 @@
           "description": "The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account."
         },
         "maxDegreeOfParallelismPerJob": {
+          "readOnly": true,
           "type": "integer",
           "format": "int32",
           "minimum": 1,
@@ -2022,26 +1804,13 @@
           "description": "The minimum supported priority per job for this account."
         },
         "queryStoreRetention": {
+          "readOnly": true,
           "type": "integer",
           "format": "int32",
           "minimum": 1,
           "maximum": 180,
           "default": 30,
           "description": "The number of days that job metadata is retained."
-        },
-        "debugDataAccessLevel": {
-          "readOnly": true,
-          "type": "string",
-          "enum": [
-            "All",
-            "Customer",
-            "None"
-          ],
-          "x-ms-enum": {
-            "name": "DebugDataAccessLevel",
-            "modelAsString": false
-          },
-          "description": "The current state of the DebugDataAccessLevel for this account."
         }
       },
       "description": "The account specific properties that are associated with an underlying Data Lake Analytics account. Returned only when retrieving a specific account."
@@ -2135,6 +1904,7 @@
       ],
       "properties": {
         "properties": {
+          "readOnly": true,
           "x-ms-client-flatten": true,
           "$ref": "#/definitions/DataLakeStoreAccountInformationProperties",
           "description": "The Data Lake Store account properties."
@@ -2409,151 +2179,6 @@
       },
       "description": "Data Lake Analytics firewall rule list information."
     },
-    "VirtualNetworkRuleState": {
-      "readOnly": true,
-      "type": "string",
-      "enum": [
-        "Active",
-        "NetworkSourceDeleted",
-        "Failed"
-      ],
-      "x-ms-enum": {
-        "name": "VirtualNetworkRuleState",
-        "modelAsString": false
-      },
-      "description": "The current state of the VirtualNetworkRule for this account."
-    },
-    "VirtualNetworkRule": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/SubResource"
-        }
-      ],
-      "properties": {
-        "properties": {
-          "readOnly": true,
-          "x-ms-client-flatten": true,
-          "$ref": "#/definitions/VirtualNetworkRuleProperties",
-          "description": "The  VirtualNetwork rule properties."
-        }
-      },
-      "description": "Data Lake Analytics  VirtualNetwork Rule information."
-    },
-    "VirtualNetworkRuleProperties": {
-      "properties": {
-        "subnetId": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The resource identifier for the subnet"
-        },
-        "virtualNetworkRuleState": {
-          "readOnly": true,
-          "$ref": "#/definitions/VirtualNetworkRuleState",
-          "description": "The current state of the VirtualNetwork Rule"
-        }
-      },
-      "description": "The VirtualNetwork Rule properties."
-    },
-    "VirtualNetworkRuleListResult": {
-      "properties": {
-        "value": {
-          "readOnly": true,
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/VirtualNetworkRule"
-          },
-          "description": "The results of the list operation."
-        },
-        "nextLink": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The link (url) to the next page of results."
-        }
-      },
-      "description": "Data Lake Analytics VirtualNetwork rule list information."
-    },
-    "HiveMetastore": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/SubResource"
-        }
-      ],
-      "properties": {
-        "properties": {
-          "readOnly": true,
-          "x-ms-client-flatten": true,
-          "$ref": "#/definitions/HiveMetastoreProperties",
-          "description": "The  HiveMetastoreProperties rule properties."
-        }
-      }
-    },
-    "HiveMetastoreProperties": {
-      "properties": {
-        "serverUri": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The serverUri for the Hive MetaStore"
-        },
-        "databaseName": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The databaseName for the Hive MetaStore"
-        },
-        "runtimeVersion": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The runtimeVersion for the Hive MetaStore"
-        },
-        "userName": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The userName for the Hive MetaStore"
-        },
-        "password": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The password for the Hive MetaStore"
-        },
-        "nestedResourceProvisioningState": {
-          "readOnly": true,
-          "$ref": "#/definitions/NestedResourceProvisioningState",
-          "description": "The current state of the NestedResource"
-        }
-      },
-      "description": "The HiveMetastore  properties."
-    },
-    "HiveMetastoreListResult": {
-      "properties": {
-        "value": {
-          "readOnly": true,
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/HiveMetastore"
-          },
-          "description": "The results of the list operation."
-        },
-        "nextLink": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The link (url) to the next page of results."
-        }
-      },
-      "description": "Data Lake Analytics HiveMetastore list information."
-    },
-    "NestedResourceProvisioningState": {
-      "readOnly": true,
-      "type": "string",
-      "enum": [
-        "Succeeded",
-        "Canceled",
-        "Failed"
-      ],
-      "x-ms-enum": {
-        "name": "NestedResourceProvisioningState",
-        "modelAsString": false
-      },
-      "description": "The current state of the NestedResourceProvisioning for this account."
-    },
     "Operation": {
       "properties": {
         "name": {
@@ -2565,11 +2190,6 @@
           "readOnly": true,
           "$ref": "#/definitions/OperationDisplay",
           "description": "The display information for the operation."
-        },
-        "properties": {
-          "readOnly": true,
-          "$ref": "#/definitions/OperationMetaPropertyInfo",
-          "description": "The OperationMetaPropertyInfo for the operation."
         },
         "origin": {
           "readOnly": true,
@@ -2630,91 +2250,6 @@
         }
       },
       "description": "The list of available operations for Data Lake Analytics."
-    },
-    "OperationMetaMetricAvailabilitiesSpecification": {
-      "properties": {
-        "timeGrain": {
-          "type": "string",
-          "description": "The timegrain for OperationMetaMetricAvailabilitiesSpecification."
-        },
-        "blobDuration": {
-          "type": "string",
-          "description": "The blobDuration for OperationMetaMetricAvailabilitiesSpecification."
-        }
-      }
-    },
-    "OperationMetaMetricSpecification": {
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name for OperationMetaMetricSpecification."
-        },
-        "displayDescription": {
-          "type": "string",
-          "description": "The displayName for OperationMetaMetricSpecification."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The displayName for OperationMetaMetricSpecification."
-        },
-        "unit": {
-          "type": "string",
-          "description": "The unit for OperationMetaMetricSpecification."
-        },
-        "aggregationType": {
-          "type": "string",
-          "description": "The aggregationType for OperationMetaMetricSpecification."
-        },
-        "availabilities": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OperationMetaMetricAvailabilitiesSpecification"
-          },
-          "description": "The availabilities for OperationMetaMetricSpecification."
-        }
-      }
-    },
-    "OperationMetaLogSpecification": {
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name for OperationMetaLogSpecification."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The displayName for OperationMetaLogSpecification."
-        },
-        "blobDuration": {
-          "type": "string",
-          "description": "The blobDuration for OperationMetaLogSpecification."
-        }
-      }
-    },
-    "OperationMetaServiceSpecification": {
-      "properties": {
-        "metricSpecifications": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OperationMetaMetricSpecification"
-          },
-          "description": "The metricSpecifications for OperationMetaServiceSpecification."
-        },
-        "logSpecifications": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OperationMetaLogSpecification"
-          },
-          "description": "The logSpecifications for OperationMetaServiceSpecification."
-        }
-      }
-    },
-    "OperationMetaPropertyInfo": {
-      "properties": {
-        "serviceSpecification": {
-          "$ref": "#/definitions/OperationMetaServiceSpecification",
-          "description": "The operations OperationMetaServiceSpecification."
-        }
-      }
     },
     "CapabilityInformation": {
       "properties": {
@@ -2849,7 +2384,6 @@
             "Enabled",
             "Disabled"
           ],
-          "default": "Disabled",
           "x-ms-enum": {
             "name": "FirewallState",
             "modelAsString": false
@@ -2862,7 +2396,6 @@
             "Enabled",
             "Disabled"
           ],
-          "default": "Disabled",
           "x-ms-enum": {
             "name": "FirewallAllowAzureIpsState",
             "modelAsString": false
@@ -2882,7 +2415,6 @@
             "Commitment_100000AUHours",
             "Commitment_500000AUHours"
           ],
-          "default": "Consumption",
           "x-ms-enum": {
             "name": "TierType",
             "modelAsString": false
@@ -2907,7 +2439,6 @@
           "type": "integer",
           "format": "int32",
           "minimum": 1,
-          "default": 32,
           "description": "The maximum supported degree of parallelism per job for this account."
         },
         "minPriorityPerJob": {
@@ -3154,7 +2685,6 @@
         },
         "suffix": {
           "type": "string",
-          "default": "azuredatalakestore.net",
           "description": "The optional suffix for the storage account."
         }
       },

@@ -16,6 +16,8 @@
         ],
         "evaluationFrequency": "PT1M",
         "windowSize": "PT15M",
+        "targetResourceType": "Microsoft.Compute/virtualMachines",
+        "targetResourceRegion": "southcentralus",
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
           "allOf": [
@@ -39,8 +41,8 @@
         "autoMitigate": false,
         "actions": [
           {
-            "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
-            "webHookProperties": {
+            "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+            "webhookProperties": {
               "key11": "value11",
               "key12": "value12"
             }
@@ -93,8 +95,8 @@
           "autoMitigate": false,
           "actions": [
             {
-              "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
-              "webHookProperties": {
+              "actionGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+              "webhookProperties": {
                 "key11": "value11",
                 "key12": "value12"
               }

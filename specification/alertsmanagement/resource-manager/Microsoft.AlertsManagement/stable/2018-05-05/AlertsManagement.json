@@ -128,7 +128,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -171,7 +171,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -210,7 +210,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -246,7 +246,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -315,7 +315,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -386,7 +386,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -435,7 +435,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -480,7 +480,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -516,7 +516,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/AlertsManagementErrorResponse"
+              "$ref": "#/definitions/errorResponse"
             }
           }
         },
@@ -913,7 +913,7 @@
         "value"
       ]
     },
-    "AlertsManagementErrorResponse": {
+    "errorResponse": {
       "description": "An error response from the service.",
       "properties": {
         "error": {

@@ -1860,8 +1860,8 @@
       "type": "string",
       "description": "The version of a server.",
       "enum": [
-        "10.2",
-        "10.3"
+        "5.6",
+        "5.7"
       ],
       "x-ms-enum": {
         "name": "ServerVersion",
@@ -1880,19 +1880,54 @@
         "modelAsString": false
       }
     },
-    "MinimalTlsVersion": {
-      "type": "string",
-      "description": "Enforce a minimal Tls version for the server.",
-      "enum": [
-        "TLS1_0",
-        "TLS1_1",
-        "TLS1_2",
-        "TLSEnforcementDisabled"
+    "ProxyResource": {
+      "description": "Resource properties.",
+      "properties": {
+        "id": {
+          "readOnly": true,
+          "type": "string",
+          "description": "Resource ID"
+        },
+        "name": {
+          "readOnly": true,
+          "type": "string",
+          "description": "Resource name."
+        },
+        "type": {
+          "readOnly": true,
+          "type": "string",
+          "description": "Resource type."
+        }
+      },
+      "x-ms-azure-resource": true
+    },
+    "TrackedResource": {
+      "description": "Resource properties including location and tags for track resources.",
+      "properties": {
+        "location": {
+          "type": "string",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ],
+          "description": "The location the resource resides in."
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Application-specific metadata in the form of key-value pairs."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/ProxyResource"
+        }
       ],
-      "x-ms-enum": {
-        "name": "MinimalTlsVersionEnum",
-        "modelAsString": true
-      }
+      "required": [
+        "location"
+      ]
     },
     "ServerProperties": {
       "properties": {
@@ -1907,10 +1942,6 @@
         "sslEnforcement": {
           "$ref": "#/definitions/SslEnforcement",
           "description": "Enable ssl enforcement or not when connect to server."
-        },
-        "minimalTlsVersion": {
-          "$ref": "#/definitions/MinimalTlsVersion",
-          "description": "Enforce a minimal Tls version for the server."
         },
         "userVisibleState": {
           "type": "string",
@@ -2006,10 +2037,6 @@
         "sslEnforcement": {
           "$ref": "#/definitions/SslEnforcement",
           "description": "Enable ssl enforcement or not when connect to server."
-        },
-        "minimalTlsVersion": {
-          "$ref": "#/definitions/MinimalTlsVersion",
-          "description": "Enforce a minimal Tls version for the server."
         },
         "storageProfile": {
           "$ref": "#/definitions/StorageProfile",
@@ -2150,46 +2177,10 @@
           "description": "The family of hardware."
         }
       },
-      "required": [
-        "name"
-      ],
       "description": "Billing information related properties of a server."
-    },
-    "ResourceIdentity": {
-      "description": "Azure Active Directory identity configuration for a resource.",
-      "type": "object",
-      "properties": {
-        "principalId": {
-          "format": "uuid",
-          "description": "The Azure Active Directory principal id.",
-          "type": "string",
-          "readOnly": true
-        },
-        "type": {
-          "description": "The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.",
-          "enum": [
-            "SystemAssigned"
-          ],
-          "type": "string",
-          "x-ms-enum": {
-            "name": "IdentityType",
-            "modelAsString": true
-          }
-        },
-        "tenantId": {
-          "format": "uuid",
-          "description": "The Azure Active Directory tenant id.",
-          "type": "string",
-          "readOnly": true
-        }
-      }
     },
     "Server": {
       "properties": {
-        "identity": {
-          "$ref": "#/definitions/ResourceIdentity",
-          "description": "The Azure Active Directory identity of the server."
-        },
         "sku": {
           "$ref": "#/definitions/Sku",
           "description": "The SKU (pricing tier) of the server."
@@ -2202,7 +2193,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/TrackedResource"
+          "$ref": "#/definitions/TrackedResource"
         }
       ],
       "description": "Represents a server."
@@ -2260,10 +2251,6 @@
             "sslEnforcement": {
               "$ref": "#/definitions/SslEnforcement",
               "description": "Enable ssl enforcement or not when connect to server."
-            },
-            "minimalTlsVersion": {
-              "$ref": "#/definitions/MinimalTlsVersion",
-              "description": "Enforce a minimal Tls version for the server."
             },
             "replicationRole": {
               "type": "string",
@@ -2324,7 +2311,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "required": [
@@ -2382,7 +2369,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "properties": {
@@ -2435,7 +2422,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a Database."
@@ -2495,7 +2482,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a Configuration."
@@ -2633,7 +2620,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a log file."
@@ -2807,7 +2794,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "properties": {
@@ -2875,7 +2862,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a Query Text."
@@ -3014,7 +3001,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a Query Statistic."
@@ -3132,7 +3119,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a Wait Statistic."
@@ -3170,7 +3157,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a recommendation action advisor."
@@ -3247,7 +3234,7 @@
       },
       "allOf": [
         {
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
+          "$ref": "#/definitions/ProxyResource"
         }
       ],
       "description": "Represents a Recommendation Action."

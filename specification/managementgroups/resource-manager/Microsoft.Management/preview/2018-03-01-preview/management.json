@@ -273,7 +273,7 @@
       }
     },
     "/providers/Microsoft.Management/managementGroups/{groupId}/descendants": {
-      "get": {
+      "post": {
         "tags": [
           "ManagementGroups_Descendants"
         ],

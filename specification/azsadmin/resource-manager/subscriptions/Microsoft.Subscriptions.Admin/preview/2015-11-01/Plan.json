@@ -5,7 +5,7 @@
     "title": "SubscriptionsManagementClient",
     "description": "The Admin Subscriptions Management Client."
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
@@ -37,12 +37,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "200": {
             "description": "OK",
             "schema": {
@@ -55,7 +49,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans": {
       "get": {
         "x-ms-examples": {
           "Get the list of plans under a resource group.": {
@@ -79,12 +73,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "200": {
             "description": "OK",
             "schema": {
@@ -97,7 +85,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans/{plan}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans/{plan}": {
       "get": {
         "x-ms-examples": {
           "Get the specified plan.": {
@@ -124,12 +112,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "200": {
             "description": "OK",
             "schema": {
@@ -163,16 +145,10 @@
             "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "#/parameters/PlanDefinitionParameter"
+            "$ref": "#/parameters/NewPlanParameter"
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "201": {
             "description": "Created",
             "schema": {
@@ -213,12 +189,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "200": {
             "description": "OK"
           },
@@ -255,12 +225,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "200": {
             "description": "OK",
             "schema": {
@@ -297,12 +261,6 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": "Unexpected Error",
-            "schema": {
-              "$ref": "Subscriptions.json#/definitions/Error"
-            }
-          },
           "200": {
             "description": "OK",
             "schema": {
@@ -359,8 +317,7 @@
         },
         "subscriptionCount": {
           "description": "Subscription count.",
-          "type": "integer",
-          "format": "int32"
+          "type": "integer"
         },
         "skuIds": {
           "description": "SKU identifiers.",
@@ -389,9 +346,9 @@
     }
   },
   "parameters": {
-    "PlanDefinitionParameter": {
+    "NewPlanParameter": {
       "description": "New plan.",
-      "name": "planDefinition",
+      "name": "newPlan",
       "in": "body",
       "required": true,
       "schema": {

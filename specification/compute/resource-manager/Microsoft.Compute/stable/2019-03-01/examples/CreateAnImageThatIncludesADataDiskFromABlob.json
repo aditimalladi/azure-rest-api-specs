@@ -18,8 +18,7 @@
               "lun": 1,
               "blobUri": "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"
             }
-          ],
-          "zoneResilient": false
+          ]
         }
       }
     }
@@ -40,8 +39,7 @@
                 "lun": 1,
                 "blobUri": "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"
               }
-            ],
-            "zoneResilient": false
+            ]
           },
           "provisioningState": "Creating"
         },
@@ -66,8 +64,7 @@
                 "lun": 1,
                 "blobUri": "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"
               }
-            ],
-            "zoneResilient": false
+            ]
           },
           "provisioningState": "Creating"
         },

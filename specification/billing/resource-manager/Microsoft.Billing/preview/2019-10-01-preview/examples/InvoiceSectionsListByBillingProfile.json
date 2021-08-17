@@ -13,8 +13,7 @@
             "name": "22000000-0000-0000-0000-000000000000",
             "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
             "properties": {
-              "displayName": "invoiceSection1",
-              "state": "Active"
+              "displayName": "invoiceSection1"
             }
           },
           {
@@ -22,9 +21,7 @@
             "name": "22000000-0000-0000-0000-000000000011",
             "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
             "properties": {
-              "displayName": "invoiceSection2",
-              "state": "Restricted",
-              "targetCloud": "USSec"
+              "displayName": "invoiceSection2"
             }
           }
         ]

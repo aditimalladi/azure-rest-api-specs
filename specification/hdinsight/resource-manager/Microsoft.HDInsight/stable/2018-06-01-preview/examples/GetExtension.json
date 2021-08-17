@@ -7,11 +7,6 @@
     "extensionName": "clustermonitoring"
   },
   "responses": {
-    "200": {
-      "body": {
-        "clusterMonitoringEnabled": true,
-        "workspaceId": "id"
-      }
-    }
+    "200": {}
   }
 }

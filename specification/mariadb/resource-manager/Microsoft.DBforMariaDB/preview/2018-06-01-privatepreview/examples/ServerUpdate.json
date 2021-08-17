@@ -6,7 +6,7 @@
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
     "parameters": {
       "properties": {
-        "administratorLoginPassword": "<administratorLoginPassword>",
+        "administratorLoginPassword": "newpa$$w0rd",
         "sslEnforcement": "Disabled"
       }
     }
@@ -27,7 +27,7 @@
             "backupRetentionDays": 7,
             "geoRedundantBackup": "Enabled"
           },
-          "version": "10.3",
+          "version": "5.7",
           "sslEnforcement": "Disabled",
           "userVisibleState": "Ready",
           "fullyQualifiedDomainName": "mariadbtestsvc4.mariadb.database.azure.com",

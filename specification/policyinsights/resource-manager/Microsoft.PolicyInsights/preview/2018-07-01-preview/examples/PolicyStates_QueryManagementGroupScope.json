@@ -8,7 +8,6 @@
   "responses": {
     "200": {
       "body": {
-        "@odata.nextLink": null,
         "@odata.context": "https://management.azure.com/providers/Microsoft.Management/managementGroups/myManagementGroup/providers/Microsoft.PolicyInsights/policyStates/$metadata#latest",
         "@odata.count": 2,
         "value": [
@@ -39,8 +38,7 @@
             "policySetDefinitionCategory": null,
             "policySetDefinitionParameters": null,
             "managementGroupIds": "myManagementGroup,fff988bf-fff1-ffff-fffb-fffcd011db47",
-            "policyDefinitionReferenceId": "15521232277412542086",
-            "complianceState": "NonCompliant"
+            "policyDefinitionReferenceId": "15521232277412542086"
           },
           {
             "@odata.id": null,
@@ -69,8 +67,7 @@
             "policySetDefinitionCategory": null,
             "policySetDefinitionParameters": null,
             "managementGroupIds": "myManagementGroup,fff988bf-fff1-ffff-fffb-fffcd011db47",
-            "policyDefinitionReferenceId": "",
-            "complianceState": "NonCompliant"
+            "policyDefinitionReferenceId": ""
           }
         ]
       }

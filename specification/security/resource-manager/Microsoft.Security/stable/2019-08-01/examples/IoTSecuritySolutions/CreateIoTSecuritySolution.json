@@ -31,8 +31,7 @@
             "recommendationType": "IoT_SharedCredentials",
             "status": "Disabled"
           }
-        ],
-        "unmaskedIpLoggingStatus": "Enabled"
+        ]
       }
     }
   },
@@ -144,16 +143,7 @@
               "name": "TLS cipher suite upgrade",
               "status": "Enabled"
             }
-          ],
-          "unmaskedIpLoggingStatus": "Enabled"
-        },
-        "systemData": {
-          "createdBy": "string",
-          "createdByType": "User",
-          "createdAt": "2020-04-27T21:53:29.0928001Z",
-          "lastModifiedBy": "string",
-          "lastModifiedByType": "User",
-          "lastModifiedAt": "2020-04-27T21:53:29.0928001Z"
+          ]
         }
       }
     },
@@ -264,16 +254,7 @@
               "name": "TLS cipher suite upgrade",
               "status": "Enabled"
             }
-          ],
-          "unmaskedIpLoggingStatus": "Enabled"
-        },
-        "systemData": {
-          "createdBy": "string",
-          "createdByType": "User",
-          "createdAt": "2020-04-27T21:53:29.0928001Z",
-          "lastModifiedBy": "string",
-          "lastModifiedByType": "User",
-          "lastModifiedAt": "2020-04-27T21:53:29.0928001Z"
+          ]
         }
       }
     }

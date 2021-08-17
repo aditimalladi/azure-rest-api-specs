@@ -9272,8 +9272,7 @@
         },
         "ExampleId": {
           "description": "The newly created sample ID.",
-          "type": "integer",
-          "format": "int64"
+          "type": "integer"
         }
       }
     },

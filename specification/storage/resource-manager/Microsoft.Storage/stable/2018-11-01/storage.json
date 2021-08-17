@@ -2202,7 +2202,7 @@
             "Lifecycle"
           ],
           "x-ms-enum": {
-            "name": "RuleType",
+            "name": "type",
             "modelAsString": true
           }
         },

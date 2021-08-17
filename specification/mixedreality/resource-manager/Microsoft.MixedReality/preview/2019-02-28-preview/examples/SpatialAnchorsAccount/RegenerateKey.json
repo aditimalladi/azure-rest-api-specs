@@ -1,9 +1,9 @@
 {
   "parameters": {
-    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "resourceGroupName": "MyResourceGroup",
+    "subscriptionId": "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+    "resourceGroupName": "mrsecf",
     "resourceType": "SpatialAnchorsAccount",
-    "spatialAnchorsAccountName": "MyAccount",
+    "spatialAnchorsAccountName": "alpha",
     "api-version": "2019-02-28-preview",
     "spatialAnchorsAccountKeyRegenerate": {
       "serial": 1
@@ -12,8 +12,8 @@
   "responses": {
     "200": {
       "body": {
-        "primaryKey": "<primaryKey>",
-        "secondaryKey": "<secondaryKey>"
+        "primaryKey": "vMAlcI/j25TwDs8hjTorto3JQkoiqZAXKsFq0rYnSNc=",
+        "secondaryKey": "N4umIGhJt8LgnMMMBpwFOxVOS9zpxHxSHy1TJhN3hU4="
       }
     }
   }

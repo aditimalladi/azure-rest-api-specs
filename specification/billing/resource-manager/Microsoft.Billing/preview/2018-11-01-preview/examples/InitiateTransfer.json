@@ -5,7 +5,7 @@
     "invoiceSectionName": "invoiceSectionName",
     "body": {
       "properties": {
-        "billingProfileId": "billingProfileId",
+        "billingProfileName": "billingProfileName",
         "recipientEmailId": "user@contoso.com"
       }
     }

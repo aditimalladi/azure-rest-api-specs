@@ -2,7 +2,7 @@
   "parameters": {
     "api-version": "2018-08-20-preview",
     "subscriptionId": "subid",
-    "locationName": "eastus",
+    "locationName": "westus",
     "operationResultId": "exampleid"
   },
   "responses": {

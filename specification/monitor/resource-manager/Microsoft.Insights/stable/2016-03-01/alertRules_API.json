@@ -36,9 +36,9 @@
     }
   },
   "paths": {
-    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/alertrules/{ruleName}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/microsoft.insights/alertrules/{ruleName}": {
       "put": {
-        "description": "Creates or updates a classic metric alert rule.",
+        "description": "Creates or updates an alert rule.",
         "tags": [
           "AlertRules"
         ],
@@ -51,7 +51,7 @@
             "$ref": "#/parameters/RuleNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "name": "parameters",
@@ -63,7 +63,7 @@
             "description": "The parameters of the rule to create or update."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -93,7 +93,7 @@
         }
       },
       "delete": {
-        "description": "Deletes a classic metric alert rule",
+        "description": "Deletes an alert rule",
         "tags": [
           "AlertRules"
         ],
@@ -106,10 +106,10 @@
             "$ref": "#/parameters/RuleNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -118,12 +118,6 @@
           },
           "200": {
             "description": "Successful request to delete an alert rule"
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-examples": {
@@ -133,7 +127,7 @@
         }
       },
       "get": {
-        "description": "Gets a classic metric alert rule",
+        "description": "Gets an alert rule",
         "tags": [
           "AlertRules"
         ],
@@ -146,10 +140,10 @@
             "$ref": "#/parameters/RuleNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -157,12 +151,6 @@
             "description": "Successful request to get an alert rule",
             "schema": {
               "$ref": "#/definitions/AlertRuleResource"
-            }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -173,11 +161,11 @@
         }
       },
       "patch": {
-        "description": "Updates an existing classic metric AlertRuleResource. To update other fields use the CreateOrUpdate method.",
+        "description": "Updates an existing AlertRuleResource. To update other fields use the CreateOrUpdate method.",
         "operationId": "AlertRules_Update",
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -186,7 +174,7 @@
             "$ref": "#/parameters/RuleNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "name": "alertRulesResource",
@@ -199,6 +187,12 @@
           }
         ],
         "responses": {
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
           "200": {
             "description": "Successful request to update an alert rule",
             "schema": {
@@ -210,12 +204,6 @@
             "schema": {
               "$ref": "#/definitions/AlertRuleResource"
             }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-examples": {
@@ -225,22 +213,22 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/alertrules": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/microsoft.insights/alertrules": {
       "get": {
         "tags": [
           "AlertRules"
         ],
         "operationId": "AlertRules_ListByResourceGroup",
-        "description": "List the classic metric alert rules within a resource group.",
+        "description": "List the alert rules within a resource group.",
         "parameters": [
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -248,12 +236,6 @@
             "description": "Successful request for a list of alert rules",
             "schema": {
               "$ref": "#/definitions/AlertRuleResourceCollection"
-            }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -267,19 +249,19 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/alertrules": {
+    "/subscriptions/{subscriptionId}/providers/microsoft.insights/alertrules": {
       "get": {
         "tags": [
           "AlertRules"
         ],
         "operationId": "AlertRules_ListBySubscription",
-        "description": "List the classic metric alert rules within a subscription.",
+        "description": "List the alert rules within a subscription.",
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           }
         ],
         "responses": {
@@ -287,12 +269,6 @@
             "description": "Successful request for a list of alert rules",
             "schema": {
               "$ref": "#/definitions/AlertRuleResourceCollection"
-            }
-          },
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -337,18 +313,6 @@
         "resourceUri": {
           "type": "string",
           "description": "the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule."
-        },
-        "legacyResourceId": {
-          "type": "string",
-          "description": "the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule."
-        },
-        "resourceLocation": {
-          "type": "string",
-          "description": "the location of the resource."
-        },
-        "metricNamespace": {
-          "type": "string",
-          "description": "the namespace of the metric."
         }
       },
       "required": [
@@ -633,10 +597,6 @@
           "type": "string",
           "description": "the description of the alert rule that will be included in the alert email."
         },
-        "provisioningState": {
-          "type": "string",
-          "description": "the provisioning state."
-        },
         "isEnabled": {
           "type": "boolean",
           "description": "the flag that indicates whether the alert rule is enabled."
@@ -644,10 +604,6 @@
         "condition": {
           "$ref": "#/definitions/RuleCondition",
           "description": "the condition that results in the alert rule being activated."
-        },
-        "action": {
-          "$ref": "#/definitions/RuleAction",
-          "description": "action that is performed when the alert rule becomes active, and when an alert condition is resolved."
         },
         "actions": {
           "type": "array",
@@ -766,6 +722,20 @@
     }
   },
   "parameters": {
+    "SubscriptionIdParameter": {
+      "name": "subscriptionId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "The Azure subscription Id."
+    },
+    "ApiVersionParameter": {
+      "name": "api-version",
+      "in": "query",
+      "required": true,
+      "type": "string",
+      "description": "Client Api Version."
+    },
     "ResourceGroupNameParameter": {
       "name": "resourceGroupName",
       "in": "path",

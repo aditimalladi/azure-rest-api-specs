@@ -5,7 +5,7 @@
     "title": "UpdateAdminClient",
     "version": "2016-05-01"
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
@@ -16,7 +16,7 @@
     "application/json"
   ],
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Update.Admin/updateLocations/{updateLocation}/updates": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Update.Admin/updateLocations/{updateLocation}/updates": {
       "get": {
         "x-ms-examples": {
           "Get the list of updates at an update locations.": {
@@ -55,7 +55,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Update.Admin/updateLocations/{updateLocation}/updates/{updateName}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Update.Admin/updateLocations/{updateLocation}/updates/{updateName}": {
       "get": {
         "x-ms-examples": {
           "Get a specific update at an update location.": {
@@ -94,7 +94,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Update.Admin/updateLocations/{updateLocation}/updates/{updateName}/Apply": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Update.Admin/updateLocations/{updateLocation}/updates/{updateName}/Apply": {
       "post": {
         "x-ms-examples": {
           "Apply a specific update at an update location.": {
@@ -161,6 +161,11 @@
     "UpdateModel": {
       "description": "Properties of an update.",
       "properties": {
+        "dateAvailable": {
+          "description": "Date uploaded by provider.",
+          "type": "string",
+          "format": "date-time"
+        },
         "installedDate": {
           "description": "Date update was installed.",
           "type": "string",
@@ -182,10 +187,6 @@
           "description": "The minimum version required to install.",
           "type": "string"
         },
-        "minOemVersionRequired": {
-          "description": "The minimum OEM version required to install.",
-          "type": "string"
-        },
         "packagePath": {
           "description": "Path to the update package.",
           "type": "string"
@@ -195,7 +196,7 @@
           "type": "integer",
           "format": "int64"
         },
-        "displayName": {
+        "updateName": {
           "description": "Name of the update.",
           "type": "string"
         },
@@ -203,13 +204,17 @@
           "description": "Version of the update.",
           "type": "string"
         },
-        "oemVersion": {
+        "updateOemFile": {
           "description": "OEM version of the update.",
           "type": "string"
         },
         "publisher": {
           "description": "Publisher of the update.",
           "type": "string"
+        },
+        "packageType": {
+          "description": "Describes the components that will be updated.",
+          "$ref": "#/definitions/PackageType"
         }
       }
     },
@@ -230,6 +235,19 @@
         }
       }
     },
+    "PackageType": {
+      "description": "Describes the components that will be updated.",
+      "type": "string",
+      "enum": [
+        "Microsoft",
+        "Oem",
+        "Combined"
+      ],
+      "x-ms-enum": {
+        "name": "PackageType",
+        "modelAsString": true
+      }
+    },
     "UpdateState": {
       "description": "State of the update.",
       "type": "string",
@@ -238,11 +256,9 @@
         "Obsolete",
         "Ready",
         "NotApplicableBecauseAnotherUpdateIsInProgress",
-        "Preparing",
-        "Installing",
         "Installed",
-        "PreparationFailed",
-        "InstallationFailed"
+        "Failed",
+        "Installing"
       ],
       "x-ms-enum": {
         "name": "UpdateState",

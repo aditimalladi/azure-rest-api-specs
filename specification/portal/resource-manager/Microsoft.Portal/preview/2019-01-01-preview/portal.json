@@ -213,9 +213,6 @@
               "$ref": "#/definitions/Dashboard"
             }
           },
-          "404": {
-            "description": "Not found. Dashboard with provided id doesn't exist."
-          },
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
@@ -270,9 +267,6 @@
             "schema": {
               "$ref": "#/definitions/Dashboard"
             }
-          },
-          "404": {
-            "description": "Not found. Dashboard with provided id doesn't exist."
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -401,11 +395,6 @@
       },
       "description": "List of dashboards."
     },
-    "DashboardPartMetadata": {
-      "description": "A dashboard part metadata.",
-      "type": "object",
-      "additionalProperties": true
-    },
     "DashboardParts": {
       "type": "object",
       "description": "A dashboard part.",
@@ -424,23 +413,19 @@
           "description": "The dashboard's part position.",
           "properties": {
             "x": {
-              "type": "integer",
-              "format": "int32",
+              "type": "number",
               "description": "The dashboard's part x coordinate."
             },
             "y": {
-              "type": "integer",
-              "format": "int32",
+              "type": "number",
               "description": "The dashboard's part y coordinate."
             },
             "rowSpan": {
-              "type": "integer",
-              "format": "int32",
+              "type": "number",
               "description": "The dashboard's part row span."
             },
             "colSpan": {
-              "type": "integer",
-              "format": "int32",
+              "type": "number",
               "description": "The dashboard's part column span."
             },
             "metadata": {
@@ -453,7 +438,11 @@
           }
         },
         "metadata": {
-          "$ref": "#/definitions/DashboardPartMetadata"
+          "description": "The dashboard part's metadata.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
         }
       }
     },
@@ -467,7 +456,6 @@
       "properties": {
         "order": {
           "type": "integer",
-          "format": "int32",
           "description": "The lens order."
         },
         "parts": {
@@ -642,8 +630,7 @@
       "properties": {
         "code": {
           "description": "Service specific error code which serves as the substatus for the HTTP error code.",
-          "type": "integer",
-          "format": "int32",
+          "type": "string",
           "readOnly": true
         },
         "message": {

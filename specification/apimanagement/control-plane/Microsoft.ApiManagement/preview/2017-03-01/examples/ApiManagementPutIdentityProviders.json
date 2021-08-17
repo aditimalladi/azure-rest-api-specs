@@ -5,7 +5,7 @@
     "api-version": "2017-03-01",
     "parameters": {
       "clientId": "BDNYXUKKLB",
-      "clientSecret": "<clientSecret>",
+      "clientSecret": "QNFYIDJQVSGXDCXYLECG",
       "type": "facebook"
     }
   },
@@ -14,7 +14,7 @@
       "body": {
         "id": "/identityProviders/Facebook",
         "clientId": "BDNYXUKKLB",
-        "clientSecret": "<clientSecret>",
+        "clientSecret": "QNFYIDJQVSGXDCXYLECG",
         "type": "facebook"
       }
     },
@@ -22,7 +22,7 @@
       "body": {
         "id": "/identityProviders/Facebook",
         "clientId": "BDNYXUKKLB",
-        "clientSecret": "<clientSecret>",
+        "clientSecret": "QNFYIDJQVSGXDCXYLECG",
         "type": "facebook"
       }
     }

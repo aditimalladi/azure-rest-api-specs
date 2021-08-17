@@ -3,7 +3,7 @@
     "subscriptionId": "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     "location": "local",
     "api-version": "2015-06-01-preview",
-    "resourceGroupName": "azurestack",
+    "resourceGroup": "azurestack",
     "activationName": "default",
     "productName": "Canonical.UbuntuServer1710-ARM.1.0.6"
   },
@@ -57,6 +57,7 @@
           }
         }
       }
-    }
+    },
+    "404": {}
   }
 }

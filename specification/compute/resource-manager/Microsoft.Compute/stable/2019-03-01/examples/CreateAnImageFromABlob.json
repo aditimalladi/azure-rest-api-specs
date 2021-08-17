@@ -12,8 +12,7 @@
             "osType": "Linux",
             "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
             "osState": "Generalized"
-          },
-          "zoneResilient": true
+          }
         }
       }
     }
@@ -29,8 +28,7 @@
               "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
               "caching": "ReadWrite"
             },
-            "dataDisks": [],
-            "zoneResilient": true
+            "dataDisks": []
           },
           "provisioningState": "Creating"
         },
@@ -50,8 +48,7 @@
               "blobUri": "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
               "caching": "ReadWrite"
             },
-            "dataDisks": [],
-            "zoneResilient": true
+            "dataDisks": []
           },
           "provisioningState": "Creating"
         },

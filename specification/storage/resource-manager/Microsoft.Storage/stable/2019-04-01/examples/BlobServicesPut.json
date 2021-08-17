@@ -74,10 +74,7 @@
           "enabled": true,
           "days": 300
         },
-        "automaticSnapshotPolicyEnabled": true,
-        "changeFeed": {
-          "enabled": true
-        }
+        "automaticSnapshotPolicyEnabled": true
       }
     }
   },
@@ -154,10 +151,7 @@
             "enabled": true,
             "days": 300
           },
-          "automaticSnapshotPolicyEnabled": true,
-          "changeFeed": {
-            "enabled": true
-          }
+          "automaticSnapshotPolicyEnabled": true
         }
       }
     }

@@ -291,8 +291,7 @@
           "description": "This is the object id."
         },
         "version": {
-          "type": "integer",
-          "format": "int32",
+          "type": "string",
           "description": "This is the version."
         },
         "updatedTime": {

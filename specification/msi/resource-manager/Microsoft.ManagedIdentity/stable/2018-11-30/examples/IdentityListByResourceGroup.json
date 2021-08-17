@@ -10,7 +10,7 @@
         "value": [
           {
             "id": "/subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName",
-            "location": "eastus",
+            "location": "cus",
             "name": "identityName",
             "properties": {
               "clientId": "clientGUID",

@@ -12,7 +12,7 @@
           {
             "id": "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/IoTSecuritySolutions/Locations/eastus/default",
             "name": "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/IoTSecuritySolutions/Locations/eastus/default",
-            "type": "Microsoft.Security/iotSecuritySolutions/analyticsModels",
+            "type": "Microsoft.Security/IoTSecuritySolutionAnalyticsModelList",
             "properties": {
               "metrics": {
                 "high": 5,
@@ -56,17 +56,17 @@
                 {
                   "alertDisplayName": "Custom Alert - number of device to cloud messages in AMQP protocol is not in the allowed range",
                   "reportedSeverity": "Low",
-                  "alertsCount": 200
+                  "devicesCount": 200
                 },
                 {
                   "alertDisplayName": "Custom Alert - execution of a process that is not allowed",
                   "reportedSeverity": "Medium",
-                  "alertsCount": 170
+                  "devicesCount": 170
                 },
                 {
                   "alertDisplayName": "Successful Bruteforce",
                   "reportedSeverity": "Low",
-                  "alertsCount": 150
+                  "devicesCount": 150
                 }
               ],
               "mostPrevalentDeviceRecommendations": [

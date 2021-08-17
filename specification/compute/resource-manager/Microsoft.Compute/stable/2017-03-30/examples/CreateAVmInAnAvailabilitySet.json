@@ -44,7 +44,8 @@
         "availabilitySet": {
           "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/{existing-availability-set-name}"
         }
-      }
+      },
+      "name": "myVM"
     }
   },
   "responses": {

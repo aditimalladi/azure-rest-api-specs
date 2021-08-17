@@ -8,7 +8,7 @@
       "location": "westus",
       "properties": {
         "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "<administratorLoginPassword>",
+        "administratorLoginPassword": "pass$w0rd",
         "sslEnforcement": "Enabled",
         "storageProfile": {
           "storageMB": 128000,

@@ -25,7 +25,6 @@
         "location": "https://management.azure.com/subscriptions/subid/providers/Microsoft.HDInsight/pathToOperationResult"
       }
     },
-    "200": {},
-    "404": {}
+    "200": {}
   }
 }

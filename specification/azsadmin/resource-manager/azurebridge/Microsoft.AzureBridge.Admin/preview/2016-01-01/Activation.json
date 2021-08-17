@@ -5,12 +5,12 @@
     "title": "AzureBridgeAdminClient",
     "description": "AzureBridge Admin Client."
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations": {
       "get": {
         "x-ms-examples": {
           "Return product name.": {
@@ -27,7 +27,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ApiVersionParameter"
@@ -38,12 +38,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/ActivationResourcesPage"
-            }
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "#/definitions/ExtendedErrorInfo"
             }
           }
         },
@@ -58,7 +52,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}": {
       "get": {
         "x-ms-examples": {
           "Return activation name.": {
@@ -75,7 +69,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -91,11 +85,8 @@
               "$ref": "#/definitions/ActivationResource"
             }
           },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "#/definitions/ExtendedErrorInfo"
-            }
+          "404": {
+            "description": "Not Found"
           }
         },
         "produces": [
@@ -121,7 +112,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -138,12 +129,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/ActivationResource"
-            }
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "#/definitions/ExtendedErrorInfo"
             }
           }
         },
@@ -170,7 +155,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -184,15 +169,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/ActivationResource"
-            }
-          },
-          "204": {
-            "description": "No Content"
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "#/definitions/ExtendedErrorInfo"
             }
           }
         },
@@ -265,40 +241,6 @@
         "nextLink": {
           "type": "string",
           "description": "URI to the next page."
-        }
-      }
-    },
-    "ExtendedErrorInfo": {
-      "type": "object",
-      "description": "Error response.",
-      "properties": {
-        "error": {
-          "$ref": "#/definitions/ErrorDefinition",
-          "description": "The error details."
-        }
-      }
-    },
-    "ErrorDefinition": {
-      "type": "object",
-      "description": "Error definition.",
-      "properties": {
-        "code": {
-          "description": "Service specific error code which serves as the substatus for the HTTP error code.",
-          "type": "string",
-          "readOnly": true
-        },
-        "message": {
-          "description": "Description of the error.",
-          "type": "string",
-          "readOnly": true
-        },
-        "details": {
-          "description": "Internal error details.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ErrorDefinition"
-          },
-          "readOnly": true
         }
       }
     }

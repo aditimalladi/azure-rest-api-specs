@@ -13,9 +13,8 @@
             "type": "Microsoft.Network/frontdoorwebapplicationfirewallmanagedrulesets",
             "properties": {
               "provisioningState": "Succeeded",
-              "ruleSetId": "8125d145-ddc5-4d90-9bc3-24c5f2de69a2",
               "ruleSetType": "DefaultRuleSet",
-              "ruleSetVersion": "1.0",
+              "ruleSetVersion": "preview-1.0",
               "ruleGroups": [
                 {
                   "ruleGroupName": "Group1",
@@ -23,15 +22,11 @@
                   "rules": [
                     {
                       "ruleId": "GROUP1-0001",
-                      "description": "Generic managed web application firewall rule.",
-                      "defaultState": "Enabled",
-                      "defaultAction": "Block"
+                      "description": "Generic managed web application firewall rule."
                     },
                     {
                       "ruleId": "GROUP1-0002",
-                      "description": "Generic managed web application firewall rule.",
-                      "defaultState": "Disabled",
-                      "defaultAction": "Block"
+                      "description": "Generic managed web application firewall rule."
                     }
                   ]
                 },
@@ -41,9 +36,7 @@
                   "rules": [
                     {
                       "ruleId": "GROUP2-0001",
-                      "description": "Generic managed web application firewall rule.",
-                      "defaultState": "Enabled",
-                      "defaultAction": "Allow"
+                      "description": "Generic managed web application firewall rule."
                     }
                   ]
                 }

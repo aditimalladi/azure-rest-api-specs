@@ -43,7 +43,7 @@
         ],
         "description": "List Spatial Anchors Accounts by Subscription",
         "x-ms-examples": {
-          "List spatial anchors accounts by subscription": {
+          "SpatialAnchorsAccountPageBySubscription": {
             "$ref": "./examples/spatial-anchors/GetBySubscription.json"
           }
         },
@@ -82,7 +82,7 @@
         ],
         "description": "List Resources by Resource Group",
         "x-ms-examples": {
-          "List spatial anchor accounts by resource group": {
+          "ResourceGet": {
             "$ref": "./examples/spatial-anchors/GetByResourceGroup.json"
           }
         },
@@ -124,7 +124,7 @@
         ],
         "description": "Delete a Spatial Anchors Account.",
         "x-ms-examples": {
-          "Delete spatial anchors account": {
+          "ResourceDelete": {
             "$ref": "./examples/spatial-anchors/Delete.json"
           }
         },
@@ -164,7 +164,7 @@
         ],
         "description": "Retrieve a Spatial Anchors Account.",
         "x-ms-examples": {
-          "Get spatial anchors account": {
+          "ResourceGet": {
             "$ref": "./examples/spatial-anchors/Get.json"
           }
         },
@@ -204,7 +204,7 @@
         ],
         "description": "Updating a Spatial Anchors Account",
         "x-ms-examples": {
-          "Update spatial anchors account": {
+          "ResourceCreateOrUpdate": {
             "$ref": "./examples/spatial-anchors/Patch.json"
           }
         },
@@ -247,7 +247,7 @@
         ],
         "description": "Creating or Updating a Spatial Anchors Account.",
         "x-ms-examples": {
-          "Create spatial anchor account": {
+          "ResourceCreate": {
             "$ref": "./examples/spatial-anchors/Put.json"
           }
         },
@@ -298,7 +298,7 @@
         ],
         "description": "Get Both of the 2 Keys of a Spatial Anchors Account",
         "x-ms-examples": {
-          "Get spatial anchor account key": {
+          "ResourceGetKey": {
             "$ref": "./examples/spatial-anchors/GetKeys.json"
           }
         },
@@ -338,7 +338,7 @@
         ],
         "description": "Regenerate specified Key of a Spatial Anchors Account",
         "x-ms-examples": {
-          "Regenerate spatial anchors account keys": {
+          "ResourceRegenerateKey": {
             "$ref": "./examples/spatial-anchors/RegenerateKey.json"
           }
         },
@@ -390,10 +390,6 @@
           "x-ms-client-flatten": true,
           "description": "Property bag.",
           "$ref": "./common.json#/definitions/MixedRealityAccountProperties"
-        },
-        "identity": {
-          "description": "The identity associated with this account",
-          "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/Identity"
         }
       }
     },

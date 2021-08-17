@@ -24,7 +24,6 @@
             "region": "WA",
             "country": "US"
           },
-          "billingRelationshipType": "Direct",
           "currency": "USD",
           "enabledAzurePlans": [
             {
@@ -38,10 +37,7 @@
           ],
           "invoiceDay": 5,
           "invoiceEmailOptIn": true,
-          "poNumber": "ABC12345",
-          "status": "Warned",
-          "statusReasonCode": "PastDue",
-          "spendingLimit": "On"
+          "poNumber": "ABC12345"
         }
       }
     }

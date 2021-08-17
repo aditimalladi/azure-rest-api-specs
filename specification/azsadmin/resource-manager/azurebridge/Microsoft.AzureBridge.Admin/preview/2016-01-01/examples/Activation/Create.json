@@ -3,10 +3,8 @@
     "subscriptionId": "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
     "location": "local",
     "api-version": "2015-06-01-preview",
-    "resourceGroupName": "azurestack",
-    "activation": {
-      "displayName": "default"
-    },
+    "resourceGroup": "azurestack",
+    "activation": "default",
     "activationName": "default"
   },
   "responses": {

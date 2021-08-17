@@ -6,9 +6,8 @@
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
     "parameters": {
       "properties": {
-        "administratorLoginPassword": "<administratorLoginPassword>",
-        "sslEnforcement": "Enabled",
-        "minimalTlsVersion": "TLS1_2"
+        "administratorLoginPassword": "newpa$$w0rd",
+        "sslEnforcement": "Enabled"
       }
     }
   },
@@ -30,7 +29,6 @@
           },
           "version": "9.6",
           "sslEnforcement": "Enabled",
-          "minimalTlsVersion": "TLS1_2",
           "userVisibleState": "Ready",
           "fullyQualifiedDomainName": "pgtestsvc4.postgres.database.azure.com",
           "earliestRestoreDate": "2018-03-14T21:08:24.637+00:00"

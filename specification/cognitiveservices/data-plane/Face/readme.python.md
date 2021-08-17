@@ -6,23 +6,21 @@ Use `--python-mode=update` if you already have a setup.py and just want to updat
 
 ``` yaml $(python)
 python-mode: create
-license-header: MICROSOFT_MIT_NO_VERSION
-add-credentials: true
-payload-flattening-threshold: 2
-namespace: azure.cognitiveservices.vision.face
-package-name: azure-cognitiveservices-vision-face
-clear-output-folder: false
-use: "@microsoft.azure/autorest.python@~4.0.71" 
-version: V2
-multiapi: true
-no-async: true
+python:
+  license-header: MICROSOFT_MIT_NO_VERSION
+  add-credentials: true
+  payload-flattening-threshold: 2
+  namespace: azure.cognitiveservices.vision.face
+  package-name: azure-cognitiveservices-vision-face
+  clear-output-folder: true
 ```
 ``` yaml $(python) && $(python-mode) == 'update'
-no-namespace-folders: true
-output-folder: $(python-sdks-folder)/cognitiveservices/azure-cognitiveservices-vision-face/azure/cognitiveservices/vision/face
-keep-version-file: true
+python:
+  no-namespace-folders: true
+  output-folder: $(python-sdks-folder)/cognitiveservices/azure-cognitiveservices-vision-face/azure/cognitiveservices/vision/face
 ```
 ``` yaml $(python) && $(python-mode) == 'create'
-basic-setup-py: true
-output-folder: $(python-sdks-folder)/cognitiveservices/azure-cognitives
+python:
+  basic-setup-py: true
+  output-folder: $(python-sdks-folder)/cognitiveservices/azure-cognitiveservices-vision-face
 ```

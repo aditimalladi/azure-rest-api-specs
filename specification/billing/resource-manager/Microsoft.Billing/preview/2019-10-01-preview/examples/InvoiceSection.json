@@ -12,8 +12,7 @@
         "name": "{invoiceSectionName}",
         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
         "properties": {
-          "displayName": "invoiceSection1",
-          "state": "Active"
+          "displayName": "invoiceSection1"
         }
       }
     }

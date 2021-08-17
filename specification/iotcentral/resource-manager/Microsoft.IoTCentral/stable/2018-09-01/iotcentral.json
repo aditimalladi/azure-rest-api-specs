@@ -34,7 +34,7 @@
     }
   },
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTCentral/iotApps/{resourceName}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTCentral/IoTApps/{resourceName}": {
       "get": {
         "tags": [
           "Apps"
@@ -70,7 +70,7 @@
           "default": {
             "description": "Default error response",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -130,7 +130,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -184,7 +184,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -229,13 +229,13 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         }
       }
     },
-    "/subscriptions/{subscriptionId}/providers/Microsoft.IoTCentral/iotApps": {
+    "/subscriptions/{subscriptionId}/providers/Microsoft.IoTCentral/IoTApps": {
       "get": {
         "tags": [
           "Apps"
@@ -268,14 +268,14 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
         "deprecated": false
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTCentral/iotApps": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.IoTCentral/IoTApps": {
       "get": {
         "tags": [
           "Apps"
@@ -311,7 +311,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -357,7 +357,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -403,7 +403,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -443,7 +443,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -480,7 +480,7 @@
           "default": {
             "description": "DefaultErrorResponse",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorDetails"
             }
           }
         },
@@ -500,11 +500,13 @@
         },
         "displayName": {
           "description": "The display name of the application.",
-          "type": "string"
+          "type": "string",
+          "pattern": "^.{1,200}$"
         },
         "subdomain": {
           "description": "The subdomain of the application.",
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,63}$"
         },
         "template": {
           "description": "The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.",
@@ -524,10 +526,7 @@
           "description": "The name of the SKU.",
           "enum": [
             "F1",
-            "S1",
-            "ST0",
-            "ST1",
-            "ST2"
+            "S1"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -573,10 +572,6 @@
           "additionalProperties": {
             "type": "string"
           }
-        },
-        "sku": {
-          "description": "A valid instance SKU.",
-          "$ref": "#/definitions/AppSkuInfo"
         },
         "properties": {
           "description": "The common properties of an IoT Central application.",
@@ -626,18 +621,17 @@
         "location"
       ]
     },
-    "CloudError": {
+    "ErrorDetails": {
       "description": "Error details.",
-      "x-ms-external": true,
       "properties": {
         "error": {
           "description": "Error response body.",
           "x-ms-client-flatten": true,
-          "$ref": "#/definitions/CloudErrorBody"
+          "$ref": "#/definitions/ErrorResponseBody"
         }
       }
     },
-    "CloudErrorBody": {
+    "ErrorResponseBody": {
       "description": "Details of error response.",
       "type": "object",
       "properties": {
@@ -660,7 +654,7 @@
           "type": "array",
           "description": "A list of additional details about the error.",
           "items": {
-            "$ref": "#/definitions/CloudErrorBody"
+            "$ref": "#/definitions/ErrorResponseBody"
           }
         }
       }
@@ -712,17 +706,6 @@
         "display": {
           "description": "The object that represents the operation.",
           "$ref": "#/definitions/OperationDisplay"
-        },
-        "origin": {
-          "description": "The intended executor of the operation.",
-          "type": "string",
-          "readOnly": true
-        },
-        "properties": {
-          "description": "Additional descriptions for the operation.",
-          "type": "object",
-          "readOnly": true,
-          "x-ms-client-flatten": false
         }
       }
     },
@@ -758,7 +741,8 @@
       "properties": {
         "name": {
           "description": "The name of the IoT Central application instance to check.",
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,63}$"
         },
         "type": {
           "description": "The type of the IoT Central resource to query.",
@@ -805,7 +789,7 @@
           "type": "string",
           "readOnly": true
         },
-        "name": {
+        "appTemplateName": {
           "description": "The name of the template.",
           "type": "string",
           "readOnly": true
@@ -822,35 +806,6 @@
         },
         "description": {
           "description": "The description of the template.",
-          "type": "string",
-          "readOnly": true
-        },
-        "industry": {
-          "description": "The industry of the template.",
-          "type": "string",
-          "readOnly": true
-        },
-        "locations": {
-          "description": "A list of locations that support the template.",
-          "type": "array",
-          "readOnly": true,
-          "items": {
-            "$ref": "#/definitions/AppTemplateLocations"
-          }
-        }
-      }
-    },
-    "AppTemplateLocations": {
-      "description": "IoT Central Application Template Locations.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "The ID of the location.",
-          "type": "string",
-          "readOnly": true
-        },
-        "displayName": {
-          "description": "The display name of the location.",
           "type": "string",
           "readOnly": true
         }

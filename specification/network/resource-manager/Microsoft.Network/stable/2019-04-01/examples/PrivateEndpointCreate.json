@@ -42,7 +42,7 @@
                 "privateLinkServiceConnectionState": {
                   "status": "Approved",
                   "description": "Auto-approved",
-                  "actionsRequired": "None"
+                  "actionRequired": "None"
                 }
               }
             }
@@ -77,7 +77,7 @@
                 "privateLinkServiceConnectionState": {
                   "status": "Approved",
                   "description": "Auto-approved",
-                  "actionsRequired": "None"
+                  "actionRequired": "None"
                 }
               }
             }

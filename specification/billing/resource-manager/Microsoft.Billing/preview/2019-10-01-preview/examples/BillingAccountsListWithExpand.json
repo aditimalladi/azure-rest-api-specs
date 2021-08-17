@@ -27,7 +27,6 @@
                 "country": "US"
               },
               "customerType": "Enterprise",
-              "accountType": "Enterprise",
               "organizationId": "00000000-0000-0000-0000-000000000000",
               "billingProfiles": [
                 {
@@ -48,7 +47,6 @@
                       "region": "WA",
                       "country": "US"
                     },
-                    "billingRelationshipType": "Direct",
                     "currency": "USD",
                     "enabledAzurePlans": [
                       {
@@ -63,17 +61,13 @@
                     "invoiceDay": 5,
                     "invoiceEmailOptIn": true,
                     "poNumber": "ABC12345",
-                    "status": "Warned",
-                    "statusReasonCode": "PastDue",
-                    "spendingLimit": "On",
                     "invoiceSections": [
                       {
                         "id": "/providers/Microsoft.Billing/billingAccounts/00000000-0000-0000-0000-000000000000_00000000-0000-0000-0000-000000000000/billingProfiles/11000000-0000-0000-0000-000000000000/invoiceSections/invoiceSectionId1",
                         "name": "invoiceSectionId1",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName1",
-                          "state": "Active"
+                          "displayName": "invoiceSectionName1"
                         }
                       },
                       {
@@ -81,8 +75,7 @@
                         "name": "invoiceSectionId2",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName2",
-                          "state": "Active"
+                          "displayName": "invoiceSectionName2"
                         }
                       }
                     ]
@@ -106,7 +99,6 @@
                       "region": "WA",
                       "country": "US"
                     },
-                    "billingRelationshipType": "CSPPartner",
                     "currency": "USD",
                     "enabledAzurePlans": [
                       {
@@ -121,16 +113,13 @@
                     "invoiceDay": 5,
                     "invoiceEmailOptIn": true,
                     "poNumber": "ABC12345",
-                    "status": "Active",
-                    "spendingLimit": "Off",
                     "invoiceSections": [
                       {
                         "id": "/providers/Microsoft.Billing/billingAccounts/00000000-0000-0000-0000-000000000000_00000000-0000-0000-0000-000000000000/billingProfiles/11000000-0000-0000-0000-000000000001/invoiceSections/invoiceSectionId11",
                         "name": "invoiceSectionId11",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName11",
-                          "state": "Active"
+                          "displayName": "invoiceSectionName11"
                         }
                       }
                     ]
@@ -148,7 +137,6 @@
               "agreementType": "MicrosoftCustomerAgreement",
               "address": null,
               "customerType": "Enterprise",
-              "accountType": "Enterprise",
               "organizationId": "00000000-0000-0000-0000-000000000000",
               "billingProfiles": [
                 {
@@ -169,7 +157,6 @@
                       "region": "WA",
                       "country": "US"
                     },
-                    "billingRelationshipType": "IndirectPartner",
                     "currency": "USD",
                     "enabledAzurePlans": [
                       {
@@ -181,30 +168,16 @@
                         "skuDescription": "Microsoft Azure Standard"
                       }
                     ],
-                    "indirectRelationshipInfo": {
-                      "billingAccountName": "20000000-0000-0000-0000-000000000001_00000000-0000-0000-0000-000000000000",
-                      "billingProfileName": "22000000-0000-0000-0000-000000000001",
-                      "displayName": "Customer1"
-                    },
                     "invoiceDay": 5,
                     "invoiceEmailOptIn": true,
                     "poNumber": "ABC12345",
-                    "status": "Warned",
-                    "statusReasonCode": "PastDue",
-                    "spendingLimit": "On",
-                    "targetClouds": [
-                      "USNat",
-                      "USSec"
-                    ],
                     "invoiceSections": [
                       {
                         "id": "/providers/Microsoft.Billing/billingAccounts/10000000-0000-0000-0000-000000000001_00000000-0000-0000-0000-000000000000/billingProfiles/11000000-0000-0000-0000-000000000004/invoiceSections/invoiceSectionId3",
                         "name": "invoiceSectionId3",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName3",
-                          "state": "Restricted",
-                          "targetCloud": "USNat"
+                          "displayName": "invoiceSectionName3"
                         }
                       },
                       {
@@ -212,9 +185,7 @@
                         "name": "invoiceSectionId4",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName4",
-                          "state": "Restricted",
-                          "targetCloud": "USSec"
+                          "displayName": "invoiceSectionName4"
                         }
                       }
                     ]
@@ -238,7 +209,6 @@
                       "region": "WA",
                       "country": "US"
                     },
-                    "billingRelationshipType": "IndirectCustomer",
                     "currency": "USD",
                     "enabledAzurePlans": [
                       {
@@ -250,28 +220,16 @@
                         "skuDescription": "Microsoft Azure Standard"
                       }
                     ],
-                    "indirectRelationshipInfo": {
-                      "billingAccountName": "30000000-0000-0000-0000-000000000001_00000000-0000-0000-0000-000000000000",
-                      "billingProfileName": "33000000-0000-0000-0000-000000000001",
-                      "displayName": "Partner1"
-                    },
                     "invoiceDay": 5,
                     "invoiceEmailOptIn": true,
                     "poNumber": "ABC12345",
-                    "status": "Warned",
-                    "statusReasonCode": "PastDue",
-                    "spendingLimit": "On",
-                    "targetClouds": [
-                      "USSec"
-                    ],
                     "invoiceSections": [
                       {
                         "id": "/providers/Microsoft.Billing/billingAccounts/10000000-0000-0000-0000-000000000001_00000000-0000-0000-0000-000000000000/billingProfiles/11000000-0000-0000-0000-000000000005/invoiceSections/invoiceSectionId5",
                         "name": "invoiceSectionId5",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName5",
-                          "state": "Active"
+                          "displayName": "invoiceSectionName5"
                         }
                       },
                       {
@@ -279,9 +237,7 @@
                         "name": "invoiceSectionId6",
                         "type": "Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections",
                         "properties": {
-                          "displayName": "invoiceSectionName6",
-                          "state": "Restricted",
-                          "targetCloud": "USSec"
+                          "displayName": "invoiceSectionName6"
                         }
                       }
                     ]

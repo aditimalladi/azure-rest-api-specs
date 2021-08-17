@@ -32,7 +32,7 @@
                   "name": "sslcert",
                   "properties": {
                     "data": "base64-pfxData",
-                    "password": "<password>"
+                    "password": "pass1"
                   }
                 }
               ],

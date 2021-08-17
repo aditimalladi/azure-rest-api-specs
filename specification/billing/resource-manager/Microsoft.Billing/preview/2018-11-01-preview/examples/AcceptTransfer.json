@@ -4,7 +4,7 @@
     "transferName": "transferName",
     "body": {
       "properties": {
-        "productDetails": [
+        "value": [
           {
             "productType": "AzureSubscription",
             "productId": "subscriptionId"

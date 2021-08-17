@@ -11,9 +11,9 @@
           "capacity": 2
         },
         "protocol": "Quorum",
-        "password": "<password>",
+        "password": "$@123_34#&",
         "consortium": "ContoseConsortium",
-        "consortiumManagementAccountPassword": "<consortiumManagementAccountPassword>"
+        "consortiumManagementAccountPassword": "$@123_34#&"
       }
     }
   },

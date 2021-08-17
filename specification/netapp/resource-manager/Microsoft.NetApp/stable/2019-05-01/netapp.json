@@ -1693,10 +1693,9 @@
         },
         "mountTargets": {
           "title": "mountTargets",
-          "type": "array",
           "description": "List of mount targets",
           "items": {
-            "$ref": "#/definitions/mountTargetProperties"
+            "$ref": "#/definitions/mountTargetList"
           }
         }
       }
@@ -1727,7 +1726,7 @@
         },
         "nfsv4": {
           "type": "boolean",
-          "description": "Deprecated: Will use the NFSv4.1 protocol, please use swagger version 2019-07-01 or later"
+          "description": "Allows NFSv4 protocol"
         },
         "allowedClients": {
           "type": "string",

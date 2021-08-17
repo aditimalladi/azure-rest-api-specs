@@ -7,7 +7,7 @@
     "parameters": {
       "properties": {
         "administratorLogin": "dummylogin",
-        "administratorLoginPassword": "<administratorLoginPassword>"
+        "administratorLoginPassword": "Un53cuRE!"
       }
     }
   },
@@ -25,7 +25,7 @@
         "properties": {
           "fullyQualifiedDomainName": "sqlcrudtest-4645.database.windows.net",
           "administratorLogin": "dummylogin",
-          "administratorLoginPassword": "<administratorLoginPassword>",
+          "administratorLoginPassword": "Un53cuRE!",
           "externalAdministratorLogin": null,
           "externalAdministratorSid": null,
           "version": "12.0",

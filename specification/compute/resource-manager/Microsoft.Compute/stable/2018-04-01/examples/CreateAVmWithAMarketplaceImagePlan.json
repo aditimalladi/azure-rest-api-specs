@@ -11,6 +11,7 @@
         "product": "windows-data-science-vm",
         "name": "windows2016"
       },
+      "name": "myVM",
       "properties": {
         "hardwareProfile": {
           "vmSize": "Standard_D1_v2"

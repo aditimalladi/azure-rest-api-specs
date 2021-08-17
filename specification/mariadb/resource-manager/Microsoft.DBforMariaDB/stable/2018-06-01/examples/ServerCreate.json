@@ -8,9 +8,8 @@
       "location": "westus",
       "properties": {
         "administratorLogin": "cloudsa",
-        "administratorLoginPassword": "<administratorLoginPassword>",
+        "administratorLoginPassword": "pass$w0rd",
         "sslEnforcement": "Enabled",
-        "minimalTlsVersion": "TLS1_2",
         "storageProfile": {
           "storageMB": 128000,
           "backupRetentionDays": 7,
@@ -45,9 +44,8 @@
             "backupRetentionDays": 7,
             "geoRedundantBackup": "Enabled"
           },
-          "version": "10.3",
+          "version": "5.7",
           "sslEnforcement": "Enabled",
-          "minimalTlsVersion": "TLS1_2",
           "userVisibleState": "Ready",
           "fullyQualifiedDomainName": "mariadbtestsvc4.mariadb.database.azure.com",
           "earliestRestoreDate": "2018-03-14T18:02:41.577+00:00"
@@ -83,7 +81,7 @@
             "backupRetentionDays": 7,
             "geoRedundantBackup": "Enabled"
           },
-          "version": "10.3",
+          "version": "5.7",
           "sslEnforcement": "Enabled",
           "userVisibleState": "Ready",
           "fullyQualifiedDomainName": "mariadbtestsvc4.mariadb.database.azure.com",

@@ -52,7 +52,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -63,7 +63,7 @@
         "tags": [
           "FileService"
         ],
-        "operationId": "FileServices_SetServiceProperties",
+        "operationId": "FileServices_PutServiceProperties",
         "x-ms-examples": {
           "PutFileServices": {
             "$ref": "./examples/FileServicesPut.json"
@@ -106,7 +106,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -149,7 +149,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -209,12 +209,9 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
-        },
-        "x-ms-pageable": {
-          "nextLinkName": "nextLink"
         }
       }
     },
@@ -272,7 +269,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -325,7 +322,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -368,7 +365,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -411,7 +408,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/CloudError"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -525,16 +522,16 @@
       },
       "description": "The properties of the file share."
     },
-    "CloudError": {
+    "ErrorResponse": {
       "x-ms-external": true,
       "properties": {
         "error": {
-          "$ref": "#/definitions/CloudErrorBody"
+          "$ref": "#/definitions/ErrorResponseBody"
         }
       },
       "description": "An error response from the Storage service."
     },
-    "CloudErrorBody": {
+    "ErrorResponseBody": {
       "x-ms-external": true,
       "properties": {
         "code": {
@@ -552,7 +549,7 @@
         "details": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CloudErrorBody"
+            "$ref": "#/definitions/ErrorResponseBody"
           },
           "description": "A list of additional details about the error."
         }

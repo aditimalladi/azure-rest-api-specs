@@ -24,11 +24,6 @@
           "accepted": true
         }
       }
-    },
-    "415": {
-      "body": {
-        "Message": "media type unsupported"
-      }
     }
   }
 }

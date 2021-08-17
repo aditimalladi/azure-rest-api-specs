@@ -77,13 +77,7 @@
             "in": "path",
             "description": "The administrator name.",
             "required": true,
-            "type": "string",
-            "enum": [
-              "ActiveDirectory"
-            ],
-            "x-ms-enum": {
-              "name": "AdministratorName"
-            }
+            "type": "string"
           },
           {
             "$ref": "#/parameters/SubscriptionIdParameter"
@@ -127,13 +121,7 @@
             "in": "path",
             "description": "The requested administrator name.",
             "required": true,
-            "type": "string",
-            "enum": [
-              "ActiveDirectory"
-            ],
-            "x-ms-enum": {
-              "name": "AdministratorName"
-            }
+            "type": "string"
           },
           {
             "name": "parameters",
@@ -199,13 +187,7 @@
             "in": "path",
             "description": "The administrator name.",
             "required": true,
-            "type": "string",
-            "enum": [
-              "ActiveDirectory"
-            ],
-            "x-ms-enum": {
-              "name": "AdministratorName"
-            }
+            "type": "string"
           },
           {
             "$ref": "#/parameters/SubscriptionIdParameter"

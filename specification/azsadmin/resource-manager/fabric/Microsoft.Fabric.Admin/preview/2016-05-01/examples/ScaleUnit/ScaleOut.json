@@ -5,7 +5,7 @@
     "resourceGroupName": "System.local",
     "location": "local",
     "scaleUnit": "S-Cluster",
-    "scaleUnitNodeParameters": {
+    "nodeList": {
       "scaleUnitNode": "N1S2",
       "bmcIPv4Address": "192.0.0.1"
     }

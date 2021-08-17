@@ -463,14 +463,7 @@
             "schema": {
               "$ref": "#/definitions/PrivateLinkServiceVisibility"
             }
-          },
-          "202": {
-            "description": "Accepted and the operation will complete asynchronously."
           }
-        },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
         },
         "x-ms-examples": {
           "Check private link service visibility": {
@@ -523,14 +516,7 @@
             "schema": {
               "$ref": "#/definitions/PrivateLinkServiceVisibility"
             }
-          },
-          "202": {
-            "description": "Accepted and the operation will complete asynchronously."
           }
-        },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
         },
         "x-ms-examples": {
           "Check private link service visibility": {
@@ -839,7 +825,7 @@
           "type": "string",
           "description": "The reason for approval/rejection of the connection."
         },
-        "actionsRequired": {
+        "actionRequired": {
           "type": "string",
           "description": "A message indicating if changes on the service provider require any updates on the consumer."
         }

@@ -5,12 +5,12 @@
     "title": "AzureBridgeAdminClient",
     "description": "AzureBridge Admin Client."
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/downloadedProducts": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/downloadedProducts": {
       "get": {
         "x-ms-examples": {
           "Get a list of downloaded products.": {
@@ -27,7 +27,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -42,12 +42,6 @@
             "schema": {
               "$ref": "#/definitions/DownloadedProductResourcesPage"
             }
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
           }
         },
         "produces": [
@@ -61,7 +55,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/downloadedProducts/{productName}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/downloadedProducts/{productName}": {
       "get": {
         "x-ms-examples": {
           "Gets the specified downloaded product.": {
@@ -78,7 +72,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -94,14 +88,11 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
+              "$ref": "#/definitions/DownloadedProductResource"
             }
           },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
+          "404": {
+            "description": "Not Found"
           }
         },
         "produces": [
@@ -127,7 +118,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -143,82 +134,17 @@
           "200": {
             "description": "Accepted",
             "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
+              "$ref": "#/definitions/DownloadedProductResource"
             }
           },
           "202": {
             "description": "Accepted",
             "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
+              "$ref": "#/definitions/DownloadedProductResource"
             }
           },
-          "204": {
-            "description": "No Content"
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
-          }
-        },
-        "x-ms-long-running-operation": true,
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/json"
-        ]
-      },
-      "put": {
-        "x-ms-examples": {
-          "Puts the specified downloaded product.": {
-            "$ref": "./examples/DownloadedProduct/Put.json"
-          }
-        },
-        "description": "Creates a downloaded product.",
-        "tags": [
-          "DownloadedProducts"
-        ],
-        "operationId": "DownloadedProducts_Create",
-        "parameters": [
-          {
-            "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
-          },
-          {
-            "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
-          },
-          {
-            "$ref": "AzureBridge.json#/parameters/ProductNameParameter"
-          },
-          {
-            "$ref": "AzureBridge.json#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "#/parameters/DownloadedProductParameter"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
-            }
-          },
-          "202": {
-            "description": "Accepted",
-            "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
-            }
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
+          "404": {
+            "description": "Not Found"
           }
         },
         "x-ms-long-running-operation": true,
@@ -232,6 +158,53 @@
     }
   },
   "definitions": {
+    "DownloadedProductResource": {
+      "description": "Downloaded product resource.",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "x-ms-client-flatten": true,
+          "description": "Properties of the resource.",
+          "$ref": "#/definitions/DownloadedProduct"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "AzureBridge.json#/definitions/Resource"
+        }
+      ]
+    },
+    "DownloadedProduct": {
+      "description": "Properties for aggregate usage.",
+      "type": "object",
+      "properties": {
+        "vmExtensionType": {
+          "description": "Extension type of the VM.",
+          "type": "string"
+        },
+        "links": {
+          "description": "Gallery item identity.",
+          "$ref": "AzureBridge.json#/definitions/ProductLinks"
+        },
+        "legalTerms": {
+          "description": "Legal terms for the product.",
+          "type": "string"
+        },
+        "privacyPolicy": {
+          "description": "Privacy policy of the product.",
+          "type": "string"
+        },
+        "provisioningState": {
+          "description": "Provisioning state of the resource.",
+          "$ref": "AzureBridge.json#/definitions/ProvisioningState"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "AzureBridge.json#/definitions/ProductBase"
+        }
+      ]
+    },
     "DownloadedProductResourcesPage": {
       "description": "Holds an array of downloaded products and the URI to the next page.",
       "properties": {
@@ -239,7 +212,7 @@
           "description": "Array of downloaded products.",
           "type": "array",
           "items": {
-            "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
+            "$ref": "#/definitions/DownloadedProductResource"
           }
         },
         "nextLink": {
@@ -249,18 +222,7 @@
       }
     }
   },
-  "parameters": {
-    "DownloadedProductParameter": {
-      "description": "Downloaded product resource definition.",
-      "name": "downloadedProduct",
-      "in": "body",
-      "required": true,
-      "x-ms-parameter-location": "method",
-      "schema": {
-        "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
-      }
-    }
-  },
+  "parameters": {},
   "securityDefinitions": {
     "azure_auth": {
       "type": "oauth2",

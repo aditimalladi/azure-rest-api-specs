@@ -1,26 +1,18 @@
 {
   "parameters": {
     "api-version": "2016-11-01",
-    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "resourceGroupName": "myResourceGroup",
-    "jobName": "myJob"
+    "subscriptionId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+    "resourceGroupName": "Default-Storage-WestUS",
+    "jobName": "test-by1-import"
   },
   "responses": {
     "200": {
       "body": {
-        "systemData": {
-          "createdBy": "string",
-          "createdByType": "User",
-          "createdAt": "2020-02-03T01:01:01.1075056Z",
-          "lastModifiedBy": "string",
-          "lastModifiedByType": "User",
-          "lastModifiedAt": "2020-02-04T02:03:01.1974346Z"
-        },
         "properties": {
-          "storageAccountId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ClassicStorage/storageAccounts/test",
+          "storageAccountId": "/subscriptions/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/resourceGroups/Default-Storage-WestUS/providers/Microsoft.ClassicStorage/storageAccounts/test",
           "jobType": "Import",
           "returnAddress": {
-            "recipientName": "Test",
+            "recipientName": "Tets",
             "streetAddress1": "Street1",
             "streetAddress2": "street2",
             "city": "Redmond",
@@ -30,10 +22,6 @@
             "phone": "4250000000",
             "email": "Test@contoso.com"
           },
-          "returnShipping": {
-            "carrierName": "FedEx",
-            "carrierAccountNumber": "989ffff"
-          },
           "shippingInformation": {
             "recipientName": "Microsoft Azure Import/Export Service",
             "streetAddress1": "2045 Lafayette Street",
@@ -42,8 +30,7 @@
             "stateOrProvince": "CA",
             "postalCode": "95050",
             "countryOrRegion": "USA",
-            "phone": "408 0000 0000",
-            "additionalInformation": ""
+            "phone": "408 0000 0000"
           },
           "diagnosticsPath": "waimportexport",
           "logLevel": "Verbose",
@@ -59,16 +46,10 @@
               "state": "Specified"
             }
           ],
-          "provisioningState": "Succeeded",
-          "encryptionKey": {
-            "kekType": "MicrosoftManaged"
-          }
+          "provisioningState": "Succeeded"
         },
-        "identity": {
-          "type": "None"
-        },
-        "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/test",
-        "name": "myJob",
+        "id": "/subscriptions/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/resourceGroups/Default-Storage-WestUS/providers/Microsoft.ImportExport/jobs/test",
+        "name": "test-by1-import",
         "type": "Microsoft.ImportExport/jobs",
         "location": "West US"
       }

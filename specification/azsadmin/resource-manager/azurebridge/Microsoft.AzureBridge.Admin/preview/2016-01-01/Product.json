@@ -5,12 +5,12 @@
     "title": "AzureBridgeAdminClient",
     "description": "AzureBridge Admin Client."
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products": {
       "get": {
         "x-ms-examples": {
           "Return product name.": {
@@ -27,7 +27,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -42,12 +42,6 @@
             "schema": {
               "$ref": "#/definitions/ProductResourcesPage"
             }
-          },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
           }
         },
         "produces": [
@@ -61,7 +55,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products/{productName}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products/{productName}": {
       "get": {
         "x-ms-examples": {
           "Return product name.": {
@@ -78,7 +72,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -97,11 +91,8 @@
               "$ref": "#/definitions/ProductResource"
             }
           },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
+          "404": {
+            "description": "Not Found"
           }
         },
         "produces": [
@@ -112,7 +103,7 @@
         ]
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products/{productName}/download": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products/{productName}/download": {
       "post": {
         "x-ms-examples": {
           "Return product name.": {
@@ -129,7 +120,7 @@
             "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "AzureBridge.json#/parameters/ResourceGroupNameParameter"
+            "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
           },
           {
             "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
@@ -143,28 +134,16 @@
         ],
         "responses": {
           "200": {
-            "description": "Accepted",
-            "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
-            }
+            "description": "Accepted"
           },
           "202": {
-            "description": "Accepted",
-            "schema": {
-              "$ref": "AzureBridge.json#/definitions/DownloadedProductResource"
-            }
+            "description": "Accepted"
           },
-          "default": {
-            "description": "Default Response.",
-            "schema": {
-              "$ref": "Activation.json#/definitions/ExtendedErrorInfo"
-            }
+          "404": {
+            "description": "Not Found"
           }
         },
         "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
-        },
         "produces": [
           "application/json"
         ],

@@ -38,10 +38,7 @@
               "tagName": "value"
             }
           }
-        ],
-        "vmProfile": {
-          "vmSize": "Standard_D2s_v3"
-        }
+        ]
       }
     }
   },
@@ -83,10 +80,7 @@
                 "tagName": "value"
               }
             }
-          ],
-          "vmProfile": {
-            "vmSize": "Standard_D2s_v3"
-          }
+          ]
         }
       }
     },
@@ -127,10 +121,7 @@
                 "tagName": "value"
               }
             }
-          ],
-          "vmProfile": {
-            "vmSize": "Standard_D2s_v3"
-          }
+          ]
         }
       }
     }

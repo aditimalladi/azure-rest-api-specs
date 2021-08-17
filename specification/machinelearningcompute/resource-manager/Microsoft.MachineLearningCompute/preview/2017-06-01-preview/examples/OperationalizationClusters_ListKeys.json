@@ -13,12 +13,12 @@
       "body": {
         "storageAccount": {
           "resourceId": "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myCluster998989",
-          "primaryKey": "<primaryKey>",
-          "secondaryKey": "<secondaryKey>"
+          "primaryKey": "aaaaNNNNNNNNNNNN==",
+          "secondaryKey": "bbbbXXXXXXXXXXXXXXX=="
         },
         "containerRegistry": {
           "loginServer": "myclusterghijkl.azurecr.io",
-          "password": "<password>",
+          "password": "ccccKKKKKKKK=",
           "password2": "bddddTTTTTTTTTTT"
         },
         "containerService": {

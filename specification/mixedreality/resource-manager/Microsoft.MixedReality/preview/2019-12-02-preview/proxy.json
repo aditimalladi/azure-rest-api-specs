@@ -42,7 +42,7 @@
         ],
         "description": "Exposing Available Operations",
         "x-ms-examples": {
-          "List available operations": {
+          "OperationPage": {
             "$ref": "./examples/proxy/ExposingAvailableOperations.json"
           }
         },
@@ -141,7 +141,7 @@
       "properties": {
         "nameAvailable": {
           "description": "if name Available",
-          "type": "boolean"
+          "$ref": "#/definitions/NameAvailability"
         },
         "reason": {
           "description": "Resource Name To Verify",
@@ -164,10 +164,6 @@
         "display": {
           "description": "The object that represents the operation.",
           "$ref": "#/definitions/OperationDisplay"
-        },
-        "isDataAction": {
-          "description": "Whether or not this is a data plane operation",
-          "type": "boolean"
         }
       }
     },
@@ -197,6 +193,18 @@
           "description": "Description of operation",
           "type": "string"
         }
+      }
+    },
+    "NameAvailability": {
+      "description": "Whether or not the name is available.",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ],
+      "x-ms-enum": {
+        "name": "NameAvailability",
+        "modelAsString": true
       }
     },
     "NameUnavailableReason": {

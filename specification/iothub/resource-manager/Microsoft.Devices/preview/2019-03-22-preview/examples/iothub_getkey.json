@@ -10,8 +10,8 @@
     "200": {
       "body": {
         "keyName": "iothubowner",
-        "primaryKey": "<primaryKey>",
-        "secondaryKey": "<secondaryKey>",
+        "primaryKey": "2aWPrKloLLdcug12ZHNpA0e07yJmRRmYMXDLpEOTd/Y=",
+        "secondaryKey": "DLyFnDTGMDK0BU2QjT5TCkNBQ4h08mi20vOqWMC7TxU=",
         "rights": "RegistryWrite, ServiceConnect, DeviceConnect"
       }
     }

@@ -34,19 +34,16 @@
     }
   },
   "paths": {
-    "/{resourceScope}/providers/Microsoft.Blueprint/blueprintAssignments/{assignmentName}/assignmentOperations": {
+    "/{scope}/providers/Microsoft.Blueprint/blueprintAssignments/{assignmentName}/assignmentOperations": {
       "get": {
         "tags": [
           "AssignmentOperations"
         ],
         "operationId": "AssignmentOperations_List",
-        "description": "List operations for given blueprint assignment within a subscription or a management group.",
+        "description": "List operations for given blueprint assignment within a subscription.",
         "x-ms-examples": {
-          "Assignment at subscription scope": {
-            "$ref": "./examples/subscriptionBPAssignment/BlueprintAssignmentOperation_List.json"
-          },
-          "Assignment at management group scope": {
-            "$ref": "./examples/managementGroupBPAssignment/BlueprintAssignmentOperation_List.json"
+          "Assignment": {
+            "$ref": "./examples/BlueprintAssignmentOperation_List.json"
           }
         },
         "parameters": [
@@ -66,12 +63,6 @@
             "schema": {
               "$ref": "#/definitions/AssignmentOperationList"
             }
-          },
-          "default": {
-            "description": "Blueprints error response.",
-            "schema": {
-              "$ref": "blueprintDefinition.json#/definitions/CloudError"
-            }
           }
         },
         "x-ms-pageable": {
@@ -79,7 +70,7 @@
         }
       }
     },
-    "/{resourceScope}/providers/Microsoft.Blueprint/blueprintAssignments/{assignmentName}/assignmentOperations/{assignmentOperationName}": {
+    "/{scope}/providers/Microsoft.Blueprint/blueprintAssignments/{assignmentName}/assignmentOperations/{assignmentOperationName}": {
       "get": {
         "tags": [
           "AssignmentOperations"
@@ -87,11 +78,8 @@
         "operationId": "AssignmentOperations_Get",
         "description": "Get a blueprint assignment operation.",
         "x-ms-examples": {
-          "Assignment at subscription scope": {
-            "$ref": "./examples/subscriptionBPAssignment/BlueprintAssignmentOperation_Get.json"
-          },
-          "Assignment at management group scope": {
-            "$ref": "./examples/managementGroupBPAssignment/BlueprintAssignmentOperation_Get.json"
+          "Assignment": {
+            "$ref": "./examples/BlueprintAssignmentOperation_Get.json"
           }
         },
         "parameters": [
@@ -113,12 +101,6 @@
             "description": "OK -- blueprint assignment operation retrieved.",
             "schema": {
               "$ref": "#/definitions/AssignmentOperation"
-            }
-          },
-          "default": {
-            "description": "Blueprints error response.",
-            "schema": {
-              "$ref": "blueprintDefinition.json#/definitions/CloudError"
             }
           }
         }
@@ -305,11 +287,11 @@
   },
   "parameters": {
     "ScopeParameter": {
-      "name": "resourceScope",
+      "name": "scope",
       "in": "path",
       "required": true,
       "type": "string",
-      "description": "The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').",
+      "description": "The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'). For blueprint assignments management group scope is reserved for future use.",
       "x-ms-parameter-location": "method",
       "x-ms-skip-url-encoding": true
     },

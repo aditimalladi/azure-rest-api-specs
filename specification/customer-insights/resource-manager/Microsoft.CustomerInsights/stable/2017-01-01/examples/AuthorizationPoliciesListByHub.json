@@ -19,8 +19,8 @@
                 "Manage"
               ],
               "policyName": "RootManageSharedAccessKey",
-              "primaryKey": "<primaryKey>",
-              "secondaryKey": "<secondaryKey>"
+              "primaryKey": "KEvPnaBbDbEdSch27GhFx/D5Smu1bZC8bCmG33fHyi4=",
+              "secondaryKey": "wvOahlAtWZh9127MVr1yYX2pPgioqFWGEUtp1ADbfcQ="
             },
             "type": "Microsoft.CustomerInsights/hubs/AuthorizationPolicies"
           },
@@ -34,8 +34,8 @@
                 "Manage"
               ],
               "policyName": "testPolicy1125",
-              "primaryKey": "<primaryKey>",
-              "secondaryKey": "<secondaryKey>"
+              "primaryKey": "3Nk5Yce0eQXHY3S+KDuUPKFS5NkOWLqtzNYEadh1WeI=",
+              "secondaryKey": "c2Vjb25kYXJ5VGVzdFJlYWQ="
             },
             "type": "Microsoft.CustomerInsights/hubs/AuthorizationPolicies"
           }

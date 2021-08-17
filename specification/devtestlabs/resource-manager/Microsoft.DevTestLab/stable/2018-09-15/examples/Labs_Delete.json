@@ -1,9 +1,9 @@
 {
   "parameters": {
-    "api-version": "2018-09-15",
-    "subscriptionId": "{subscriptionId}",
-    "resourceGroupName": "resourceGroupName",
-    "name": "{labName}"
+    "subscriptionId": "{subscription-id}",
+    "resourceGroupName": "myResourceGroup",
+    "name": "{devtestlab-name}",
+    "api-version": "2018-09-15"
   },
   "responses": {
     "200": {},

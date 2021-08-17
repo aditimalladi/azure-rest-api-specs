@@ -74,7 +74,8 @@
             }
           }
         ],
-        "inboundNatPools": []
+        "inboundNatPools": [],
+        "outboundRules": []
       }
     }
   },
@@ -191,6 +192,7 @@
               }
             }
           ],
+          "outboundRules": [],
           "inboundNatPools": []
         }
       }
@@ -307,6 +309,7 @@
               }
             }
           ],
+          "outboundRules": [],
           "inboundNatPools": []
         }
       }

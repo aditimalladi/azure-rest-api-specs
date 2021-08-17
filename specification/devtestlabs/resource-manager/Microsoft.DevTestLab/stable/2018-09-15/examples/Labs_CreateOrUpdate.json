@@ -1,16 +1,16 @@
 {
   "parameters": {
+    "subscriptionId": "{subscription-id}",
+    "resourceGroupName": "myResourceGroup",
+    "name": "{devtestlab-name}",
     "api-version": "2018-09-15",
-    "subscriptionId": "{subscriptionId}",
-    "resourceGroupName": "resourceGroupName",
-    "name": "{labName}",
     "lab": {
       "properties": {
         "labStorageType": "{Standard|Premium}"
       },
-      "location": "{location}",
+      "location": "{azure-location}",
       "tags": {
-        "tagName1": "tagValue1"
+        "MyTag": "MyValue"
       }
     }
   },
@@ -35,14 +35,14 @@
             "markdown": ""
           },
           "provisioningState": "Creating",
-          "uniqueIdentifier": "{uniqueIdentifier}"
+          "uniqueIdentifier": "{unique-identifier}"
         },
-        "id": "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
-        "name": "{labName}",
+        "id": "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}",
+        "name": "{devtestlab-name}",
         "type": "Microsoft.DevTestLab/labs",
-        "location": "{location}",
+        "location": "{azure-location}",
         "tags": {
-          "tagName1": "tagValue1"
+          "MyTag": "MyValue"
         }
       }
     },
@@ -66,14 +66,14 @@
             "markdown": ""
           },
           "provisioningState": "Creating",
-          "uniqueIdentifier": "{uniqueIdentifier}"
+          "uniqueIdentifier": "{unique-identifier}"
         },
-        "id": "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}",
-        "name": "{labName}",
+        "id": "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}",
+        "name": "{devtestlab-name}",
         "type": "Microsoft.DevTestLab/labs",
-        "location": "{location}",
+        "location": "{azure-location}",
         "tags": {
-          "tagName1": "tagValue1"
+          "MyTag": "MyValue"
         }
       }
     }

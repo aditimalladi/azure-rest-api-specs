@@ -18,8 +18,8 @@
             "Manage"
           ],
           "policyName": "testPolicy4222",
-          "primaryKey": "<primaryKey>",
-          "secondaryKey": "<secondaryKey>"
+          "primaryKey": "cHJpbWFyeVRlc3RSZWFk",
+          "secondaryKey": "c2Vjb25kYXJ5VGVzdFJlYWQ="
         },
         "type": "Microsoft.CustomerInsights/hubs/AuthorizationPolicies"
       }

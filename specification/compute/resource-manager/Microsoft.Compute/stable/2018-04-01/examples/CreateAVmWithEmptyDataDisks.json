@@ -53,7 +53,8 @@
             }
           ]
         }
-      }
+      },
+      "name": "myVM"
     }
   },
   "responses": {

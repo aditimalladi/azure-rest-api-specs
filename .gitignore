@@ -65,6 +65,7 @@ Temporary Items
 
 # npm
 node_modules
+package-lock.json
 
 #### JetBrains
 .idea

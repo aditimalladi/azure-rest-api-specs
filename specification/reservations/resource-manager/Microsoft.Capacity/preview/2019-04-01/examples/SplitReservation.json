@@ -35,7 +35,6 @@
             "provisioningState": "Succeeded",
             "expiryDate": "2018-09-22",
             "displayName": "cabri_test",
-            "billingPlan": "Monthly",
             "effectiveDateTime": "2017-09-22T01:00:30.9253826Z",
             "lastUpdatedDateTime": "2017-09-22T01:00:36.3191627Z",
             "reservedResourceType": "VirtualMachines",
@@ -66,7 +65,6 @@
             "provisioningState": "Succeeded",
             "expiryDate": "2018-09-22",
             "displayName": "cabri_test",
-            "billingPlan": "Monthly",
             "effectiveDateTime": "2017-09-22T01:00:30.9253826Z",
             "lastUpdatedDateTime": "2017-09-22T01:00:36.3191627Z",
             "reservedResourceType": "VirtualMachines",
@@ -97,7 +95,6 @@
             "provisioningState": "Cancelled",
             "expiryDate": "2018-09-22",
             "displayName": "cabri_test",
-            "billingPlan": "Monthly",
             "effectiveDateTime": "2017-09-22T01:00:30.9253826Z",
             "extendedStatusInfo": {
               "statusCode": "Split",

@@ -1,13 +1,12 @@
 {
   "parameters": {
-    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "resourceGroupName": "MyResourceGroup",
+    "subscriptionId": "20ff7fc3-e762-44dd-bd96-b71116dcdc23",
+    "resourceGroupName": "mrsecf",
     "resourceType": "SpatialAnchorsAccount",
-    "spatialAnchorsAccountName": "MyAccount",
+    "spatialAnchorsAccountName": "alpha",
     "api-version": "2019-02-28-preview",
     "spatialAnchorsAccount": {
-      "location": "eastus2euap",
-      "tags": {
+      "Tags": {
         "heroine": "juliet",
         "hero": "romeo"
       }
@@ -24,9 +23,9 @@
           "heroine": "juliet",
           "hero": "romeo"
         },
-        "location": "eastus2euap",
-        "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/SpatialAnchorsAccounts/MyAccount",
-        "name": "MyAccount",
+        "location": "Global",
+        "id": "/subscriptions/8f8a44e1-1711-4fc4-ae53-8bcc11fc7c3c/resourceGroups/xiangyul/providers/Microsoft.MixedReality/SpatialAnchorsAccounts/alpha",
+        "name": "alpha",
         "type": "Microsoft.MixedReality/SpatialAnchorsAccounts"
       }
     }

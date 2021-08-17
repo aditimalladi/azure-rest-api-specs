@@ -9,13 +9,15 @@
       "tags": {
         "mytag": "myval"
       },
-      "properties": {}
+      "properties": {
+      }
     }
   },
   "responses": {
     "200": {
       "body": {
-        "properties": {},
+        "properties": {
+        },
         "location": "northeurope",
         "tags": {
           "mytag": "myval"
@@ -27,7 +29,8 @@
     },
     "201": {
       "body": {
-        "properties": {},
+        "properties": {
+        },
         "location": "northeurope",
         "tags": {
           "mytag": "myval"

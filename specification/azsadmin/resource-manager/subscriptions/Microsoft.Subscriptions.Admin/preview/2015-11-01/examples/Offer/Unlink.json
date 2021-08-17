@@ -6,8 +6,10 @@
     "offer": "sampleoffer1",
     "resourceGroupName": "RG1",
     "planLink": {
-      "planName": "SamplePlan",
-      "planLinkType": "Addon"
+      "properties": {
+        "planName": "SamplePlan",
+        "planLinkType": "Addon"
+      }
     }
   },
   "responses": {

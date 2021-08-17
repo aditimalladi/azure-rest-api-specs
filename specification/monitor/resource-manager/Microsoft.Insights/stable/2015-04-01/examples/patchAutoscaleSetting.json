@@ -27,8 +27,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
-                  "threshold": 10.0,
-                  "dividePerInstance": false
+                  "threshold": 10.0
                 },
                 "scaleAction": {
                   "direction": "Increase",
@@ -46,8 +45,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
-                  "threshold": 15.0,
-                  "dividePerInstance": false
+                  "threshold": 15.0
                 },
                 "scaleAction": {
                   "direction": "Decrease",
@@ -80,8 +78,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
-                  "threshold": 10.0,
-                  "dividePerInstance": false
+                  "threshold": 10.0
                 },
                 "scaleAction": {
                   "direction": "Increase",
@@ -99,8 +96,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
-                  "threshold": 15.0,
-                  "dividePerInstance": false
+                  "threshold": 15.0
                 },
                 "scaleAction": {
                   "direction": "Decrease",
@@ -181,8 +177,7 @@
                     "timeWindow": "PT5M",
                     "timeAggregation": "Average",
                     "operator": "GreaterThan",
-                    "threshold": 10.0,
-                    "dividePerInstance": false
+                    "threshold": 10.0
                   },
                   "scaleAction": {
                     "direction": "Increase",
@@ -200,8 +195,7 @@
                     "timeWindow": "PT5M",
                     "timeAggregation": "Average",
                     "operator": "GreaterThan",
-                    "threshold": 15.0,
-                    "dividePerInstance": false
+                    "threshold": 15.0
                   },
                   "scaleAction": {
                     "direction": "Decrease",
@@ -234,8 +228,7 @@
                     "timeWindow": "PT5M",
                     "timeAggregation": "Average",
                     "operator": "GreaterThan",
-                    "threshold": 10.0,
-                    "dividePerInstance": false
+                    "threshold": 10.0
                   },
                   "scaleAction": {
                     "direction": "Increase",
@@ -253,8 +246,7 @@
                     "timeWindow": "PT5M",
                     "timeAggregation": "Average",
                     "operator": "GreaterThan",
-                    "threshold": 15.0,
-                    "dividePerInstance": false
+                    "threshold": 15.0
                   },
                   "scaleAction": {
                     "direction": "Decrease",

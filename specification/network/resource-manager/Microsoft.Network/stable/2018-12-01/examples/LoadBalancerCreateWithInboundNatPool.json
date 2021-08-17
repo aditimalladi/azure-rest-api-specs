@@ -6,9 +6,6 @@
     "loadBalancerName": "lb",
     "parameters": {
       "location": "eastus",
-      "sku": {
-        "name": "Standard"
-      },
       "properties": {
         "frontendIPConfigurations": [
           {
@@ -61,7 +58,7 @@
         "type": "Microsoft.Network/loadBalancers",
         "location": "eastus",
         "sku": {
-          "name": "Standard"
+          "name": "Basic"
         },
         "properties": {
           "provisioningState": "Succeeded",
@@ -118,7 +115,7 @@
         "type": "Microsoft.Network/loadBalancers",
         "location": "eastus",
         "sku": {
-          "name": "Standard"
+          "name": "Basic"
         },
         "properties": {
           "provisioningState": "Succeeded",

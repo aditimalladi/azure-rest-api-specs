@@ -497,8 +497,7 @@
             "RequestUri",
             "RequestHeader",
             "RequestBody",
-            "Cookies",
-            "SocketAddr"
+            "Cookies"
           ],
           "x-ms-enum": {
             "name": "MatchVariable",
@@ -619,7 +618,15 @@
         },
         "enabledState": {
           "description": "Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.",
-          "$ref": "#/definitions/ManagedRuleEnabledState"
+          "type": "string",
+          "enum": [
+            "Disabled",
+            "Enabled"
+          ],
+          "x-ms-enum": {
+            "name": "ManagedRuleEnabledState",
+            "modelAsString": true
+          }
         },
         "action": {
           "description": "Describes the override action to be applied when rule matches.",
@@ -666,11 +673,6 @@
           "type": "string",
           "readOnly": true,
           "description": "Provisioning state of the managed rule set."
-        },
-        "ruleSetId": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Id of the managed rule set."
         },
         "ruleSetType": {
           "type": "string",
@@ -723,16 +725,6 @@
           "readOnly": true,
           "type": "string"
         },
-        "defaultState": {
-          "description": "Describes the default state for the managed rule.",
-          "readOnly": true,
-          "$ref": "#/definitions/ManagedRuleEnabledState"
-        },
-        "defaultAction": {
-          "description": "Describes the default action to be applied when the managed rule matches.",
-          "readOnly": true,
-          "$ref": "#/definitions/ActionType"
-        },
         "description": {
           "description": "Describes the functionality of the managed rule.",
           "readOnly": true,
@@ -751,18 +743,6 @@
       ],
       "x-ms-enum": {
         "name": "ActionType",
-        "modelAsString": true
-      }
-    },
-    "ManagedRuleEnabledState": {
-      "description": "Describes if the managed rule is in enabled or disabled state.",
-      "type": "string",
-      "enum": [
-        "Disabled",
-        "Enabled"
-      ],
-      "x-ms-enum": {
-        "name": "ManagedRuleEnabledState",
         "modelAsString": true
       }
     },

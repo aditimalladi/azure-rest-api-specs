@@ -4,8 +4,7 @@
     "resourceGroupName": "SampleResourceGroup",
     "accountName": "Account1",
     "shareName": "Share1",
-    "api-version": "2018-11-01-preview",
-    "filter": "consumerTenantName eq 'nda'"
+    "api-version": "2018-11-01-preview"
   },
   "responses": {
     "200": {
@@ -24,10 +23,9 @@
             "durationMs": 2000,
             "status": "Completed",
             "message": "nda",
-            "consumerTenantName": "nda",
-            "consumerName": "abc@yahoo.com",
-            "synchronizationId": "runId",
-            "synchronizationMode": "Incremental"
+            "company": "nda",
+            "recipient": "abc@yahoo.com",
+            "synchronizationId": "runId"
           }
         ]
       }

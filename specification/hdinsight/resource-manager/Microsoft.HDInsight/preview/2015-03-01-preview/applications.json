@@ -177,10 +177,7 @@
             }
           }
         },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
-        }
+        "x-ms-long-running-operation": true
       },
       "delete": {
         "tags": [
@@ -222,63 +219,9 @@
           },
           "202": {
             "description": "Accepted response definition."
-          },
-          "204": {
-            "description": "No Content response definition."
           }
         },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
-        }
-      }
-    },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/applications/{applicationName}/azureasyncoperations/{operationId}": {
-      "get": {
-        "tags": [
-          "Applications"
-        ],
-        "description": "Gets the async operation status.",
-        "operationId": "Applications_GetAzureAsyncOperationStatus",
-        "x-ms-examples": {
-          "Get the azure async operation status.": {
-            "$ref": "./examples/GetApplicationCreationAsyncOperationStatus.json"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "#/parameters/ResourceGroupNameParameter"
-          },
-          {
-            "$ref": "#/parameters/ClusterNameParameter"
-          },
-          {
-            "$ref": "#/parameters/ApplicationNameParameter"
-          },
-          {
-            "$ref": "#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "#/parameters/OperationIdParameter"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "Error response describing why the operation failed.",
-            "schema": {
-              "$ref": "./operations.json#/definitions/ErrorResponse"
-            }
-          },
-          "200": {
-            "description": "OK response definition.",
-            "schema": {
-              "$ref": "./cluster.json#/definitions/AsyncOperationResult"
-            }
-          }
-        }
+        "x-ms-long-running-operation": true
       }
     }
   },
@@ -296,8 +239,7 @@
         },
         "location": {
           "type": "string",
-          "description": "The location of the endpoint.",
-          "readOnly": true
+          "description": "The location of the endpoint."
         },
         "destinationPort": {
           "type": "integer",
@@ -307,28 +249,15 @@
         "publicPort": {
           "type": "integer",
           "format": "int32",
-          "description": "The public port to connect to.",
-          "readOnly": true
-        },
-        "privateIPAddress": {
-          "type": "string",
-          "description": "The private ip address of the endpoint."
+          "description": "The public port to connect to."
         },
         "subDomainSuffix": {
           "type": "string",
-          "description": "The subdomain suffix of the application.",
-          "x-ms-mutability": [
-            "create",
-            "update"
-          ]
+          "description": "The subdomain suffix of the application."
         },
         "disableGatewayAuth": {
           "type": "boolean",
-          "description": "The value indicates whether to disable GatewayAuth.",
-          "x-ms-mutability": [
-            "create",
-            "update"
-          ]
+          "description": "Disable gateway authentication."
         }
       }
     },
@@ -349,10 +278,6 @@
           "type": "integer",
           "format": "int32",
           "description": "The public port to connect to."
-        },
-        "privateIPAddress": {
-          "type": "string",
-          "description": "The private ip address of the endpoint."
         }
       }
     },
@@ -507,14 +432,6 @@
       "required": true,
       "type": "string",
       "description": "The HDInsight client API Version."
-    },
-    "OperationIdParameter": {
-      "name": "operationId",
-      "in": "path",
-      "required": true,
-      "type": "string",
-      "description": "The long running operation id.",
-      "x-ms-parameter-location": "method"
     }
   }
 }

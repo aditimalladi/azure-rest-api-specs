@@ -5,7 +5,7 @@
     "title": "ComputeDiskAdminManagementClient",
     "description": "The Admin Compute Disk Management Client."
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
@@ -39,7 +39,7 @@
             "$ref": "DiskMigrationJobs.json#/parameters/MigrationJobStatusParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Disks.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -47,12 +47,6 @@
             "description": "OK -- The list of disk migration jobs has been returned.",
             "schema": {
               "$ref": "DiskMigrationJobs.json#/definitions/DiskMigrationJobList"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "../2015-12-01-preview/Compute.json#/definitions/CrpErrorResponse"
             }
           }
         },
@@ -84,7 +78,7 @@
             "$ref": "DiskMigrationJobs.json#/parameters/MigrationIdParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Disks.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -92,12 +86,6 @@
             "description": "OK -- The disk migration job has been returned.",
             "schema": {
               "$ref": "DiskMigrationJobs.json#/definitions/DiskMigrationJob"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "../2015-12-01-preview/Compute.json#/definitions/CrpErrorResponse"
             }
           }
         }
@@ -127,16 +115,10 @@
             "$ref": "DiskMigrationJobs.json#/parameters/TargetShareParameter"
           },
           {
-            "$ref": "DiskMigrationJobs.json#/parameters/TargetScaleUnitParameter"
-          },
-          {
-            "$ref": "DiskMigrationJobs.json#/parameters/TargetVolumeLabelParameter"
-          },
-          {
             "$ref": "DiskMigrationJobs.json#/parameters/DiskListParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Disks.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -144,12 +126,6 @@
             "description": "OK --  Disk migration job is created successfully.",
             "schema": {
               "$ref": "DiskMigrationJobs.json#/definitions/DiskMigrationJob"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "../2015-12-01-preview/Compute.json#/definitions/CrpErrorResponse"
             }
           }
         }
@@ -178,7 +154,7 @@
             "$ref": "DiskMigrationJobs.json#/parameters/MigrationIdParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Disks.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -186,12 +162,6 @@
             "description": "OK --  Disk migration job cancellation is called.",
             "schema": {
               "$ref": "DiskMigrationJobs.json#/definitions/DiskMigrationJob"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "../2015-12-01-preview/Compute.json#/definitions/CrpErrorResponse"
             }
           }
         }
@@ -408,23 +378,7 @@
       "description": "The target share name.",
       "name": "targetShare",
       "in": "query",
-      "required": false,
-      "type": "string",
-      "x-ms-parameter-location": "method"
-    },
-    "TargetScaleUnitParameter": {
-      "description": "The target scale unit name.",
-      "name": "targetScaleUnit",
-      "in": "query",
-      "required": false,
-      "type": "string",
-      "x-ms-parameter-location": "method"
-    },
-    "TargetVolumeLabelParameter": {
-      "description": "The target volume label.",
-      "name": "targetVolumeLabel",
-      "in": "query",
-      "required": false,
+      "required": true,
       "type": "string",
       "x-ms-parameter-location": "method"
     },

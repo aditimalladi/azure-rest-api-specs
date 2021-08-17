@@ -34,7 +34,7 @@
                 "orchestratorProperties": {
                   "servicePrincipal": {
                     "clientId": "abcdefghijklmnopqrt",
-                    "secret": "<secret>"
+                    "secret": "uiuiwueiwuewiue"
                   }
                 },
                 "systemServices": [
@@ -89,7 +89,7 @@
                 "orchestratorProperties": {
                   "servicePrincipal": {
                     "clientId": "abcdefghijklmnopqrt",
-                    "secret": "<secret>"
+                    "secret": "uiuiwueiwuewiue"
                   }
                 },
                 "systemServices": [

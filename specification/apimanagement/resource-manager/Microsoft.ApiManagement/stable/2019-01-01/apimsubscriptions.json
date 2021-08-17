@@ -230,9 +230,6 @@
           },
           {
             "$ref": "./apimanagement.json#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "./apimanagement.json#/parameters/AppTypeParameter"
           }
         ],
         "responses": {
@@ -309,9 +306,6 @@
           },
           {
             "$ref": "./apimanagement.json#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "./apimanagement.json#/parameters/AppTypeParameter"
           }
         ],
         "responses": {

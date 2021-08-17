@@ -21,14 +21,11 @@
                 "backupRetentionDays": 7,
                 "geoRedundantBackup": "Disabled"
               },
-              "version": "10.3",
+              "version": "5.7",
               "sslEnforcement": "Enabled",
-              "minimalTlsVersion": "TLS1_2",
               "userVisibleState": "Ready",
               "fullyQualifiedDomainName": "mariadbtestsvc1.mariadb.database.azure.com",
-              "earliestRestoreDate": "2018-02-28T23:56:02.627+00:00",
-              "publicNetworkAccess": "Enabled",
-              "privateEndpointConnections": []
+              "earliestRestoreDate": "2018-02-28T23:56:02.627+00:00"
             },
             "location": "westus",
             "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMariaDB/servers/mariadbtestsvc1",
@@ -49,29 +46,11 @@
                 "backupRetentionDays": 7,
                 "geoRedundantBackup": "Disabled"
               },
-              "version": "10.3",
+              "version": "5.7",
               "sslEnforcement": "Enabled",
-              "minimalTlsVersion": "TLS1_1",
               "userVisibleState": "Ready",
               "fullyQualifiedDomainName": "mariadbtstsvc2.mariadb.database.azure.com",
-              "earliestRestoreDate": "2018-02-28T23:56:54.3+00:00",
-              "publicNetworkAccess": "Enabled",
-              "privateEndpointConnections": [
-                {
-                  "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMariaDB/servers/mariadbtstsvc2/privateEndpointConnections/private-endpoint-name-00000000-1111-2222-3333-444444444444",
-                  "properties": {
-                    "provisioningState": "Ready",
-                    "privateEndpoint": {
-                      "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/Default-Network/providers/Microsoft.Network/privateEndpoints/private-endpoint-name"
-                    },
-                    "privateLinkServiceConnectionState": {
-                      "status": "Approved",
-                      "description": "Auto-approved",
-                      "actionsRequired": "None"
-                    }
-                  }
-                }
-              ]
+              "earliestRestoreDate": "2018-02-28T23:56:54.3+00:00"
             },
             "location": "westus",
             "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMariaDB/servers/mariadbtstsvc2",
@@ -92,29 +71,11 @@
                 "backupRetentionDays": 35,
                 "geoRedundantBackup": "Enabled"
               },
-              "version": "10.3",
+              "version": "5.7",
               "sslEnforcement": "Enabled",
-              "minimalTlsVersion": "TLS1_0",
               "userVisibleState": "Ready",
               "fullyQualifiedDomainName": "mariadbtestsvc3.mariadb.database.azure.com",
-              "earliestRestoreDate": "2018-02-28T23:59:44.847+00:00",
-              "publicNetworkAccess": "Enabled",
-              "privateEndpointConnections": [
-                {
-                  "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMariaDB/servers/mariadbtestsvc3/privateEndpointConnections/private-endpoint-name-00000000-1111-2222-3333-444444444444",
-                  "properties": {
-                    "provisioningState": "Ready",
-                    "privateEndpoint": {
-                      "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/Default-Network/providers/Microsoft.Network/privateEndpoints/private-endpoint-name"
-                    },
-                    "privateLinkServiceConnectionState": {
-                      "status": "Approved",
-                      "description": "Auto-approved",
-                      "actionsRequired": "None"
-                    }
-                  }
-                }
-              ]
+              "earliestRestoreDate": "2018-02-28T23:59:44.847+00:00"
             },
             "location": "westus",
             "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg1/providers/Microsoft.DBforMariaDB/servers/mariadbtestsvc3",

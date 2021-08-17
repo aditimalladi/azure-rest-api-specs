@@ -22,8 +22,7 @@
                 "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2"
               }
             }
-          ],
-          "zoneResilient": true
+          ]
         }
       }
     }
@@ -48,8 +47,7 @@
                   "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2"
                 }
               }
-            ],
-            "zoneResilient": true
+            ]
           },
           "provisioningState": "Creating"
         },
@@ -78,8 +76,7 @@
                   "id": "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2"
                 }
               }
-            ],
-            "zoneResilient": true
+            ]
           },
           "provisioningState": "Creating"
         },

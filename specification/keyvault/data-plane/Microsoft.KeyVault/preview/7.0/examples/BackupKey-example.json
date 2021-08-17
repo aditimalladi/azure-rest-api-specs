@@ -1,6 +1,5 @@
 {
   "parameters": {
-    "vaultBaseUrl": "https://myvault.vault.azure.net/",
     "key-name": "testkey",
     "api-version": "7.0-preview"
   },

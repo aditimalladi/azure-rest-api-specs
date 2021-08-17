@@ -26,7 +26,7 @@
                     "privateLinkServiceConnectionState": {
                       "status": "Approved",
                       "description": "Auto-approved",
-                      "actionsRequired": "None"
+                      "actionRequired": "None"
                     }
                   }
                 }
@@ -61,7 +61,7 @@
                     "privateLinkServiceConnectionState": {
                       "status": "Pending",
                       "description": "Awaiting approval",
-                      "actionsRequired": "None"
+                      "actionRequired": "None"
                     }
                   }
                 }

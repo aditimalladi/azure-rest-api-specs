@@ -11,11 +11,8 @@
       "properties": {
         "publishingProfile": {
           "source": {
+            "fileName": "package.zip",
             "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"
-          },
-          "manageActions": {
-            "install": "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
-            "remove": "del C:\\package "
           },
           "targetRegions": [
             {
@@ -41,11 +38,8 @@
         "properties": {
           "publishingProfile": {
             "source": {
+              "fileName": "package.zip",
               "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"
-            },
-            "manageActions": {
-              "install": "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
-              "remove": "del C:\\package "
             },
             "enableHealthCheck": false,
             "targetRegions": [
@@ -74,11 +68,8 @@
         "properties": {
           "publishingProfile": {
             "source": {
+              "fileName": "package.zip",
               "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"
-            },
-            "manageActions": {
-              "install": "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
-              "remove": "del C:\\package "
             },
             "enableHealthCheck": false,
             "targetRegions": [
@@ -107,11 +98,8 @@
         "properties": {
           "publishingProfile": {
             "source": {
+              "fileName": "package.zip",
               "mediaLink": "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"
-            },
-            "manageActions": {
-              "install": "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
-              "remove": "del C:\\package "
             },
             "enableHealthCheck": false,
             "targetRegions": [

@@ -47,7 +47,8 @@
             "enabled": true
           }
         }
-      }
+      },
+      "name": "myVM"
     }
   },
   "responses": {

@@ -5,7 +5,7 @@
     "title": "FabricAdminClient",
     "version": "2016-05-01"
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
@@ -423,7 +423,7 @@
       "x-ms-parameter-location": "method"
     },
     "ScaleOutScaleUnitParametersInBody": {
-      "name": "scaleUnitNodeParameters",
+      "name": "nodeList",
       "description": "A list of input data that allows for adding a set of scale unit nodes.",
       "in": "body",
       "required": true,

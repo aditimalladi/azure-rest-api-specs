@@ -36,7 +36,7 @@
     }
   },
   "paths": {
-    "/{resourceUri}/providers/Microsoft.Insights/diagnosticSettings/{name}": {
+    "/{resourceUri}/providers/microsoft.insights/diagnosticSettings/{name}": {
       "get": {
         "tags": [
           "DiagnosticSettings"
@@ -48,7 +48,7 @@
             "$ref": "#/parameters/ResourceUriParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "$ref": "#/parameters/NameParameter"
@@ -85,7 +85,7 @@
             "$ref": "#/parameters/ResourceUriParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "name": "parameters",
@@ -131,7 +131,7 @@
             "$ref": "#/parameters/ResourceUriParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "$ref": "#/parameters/NameParameter"
@@ -158,7 +158,7 @@
         }
       }
     },
-    "/{resourceUri}/providers/Microsoft.Insights/diagnosticSettings": {
+    "/{resourceUri}/providers/microsoft.insights/diagnosticSettings": {
       "get": {
         "tags": [
           "DiagnosticSettings"
@@ -170,7 +170,7 @@
             "$ref": "#/parameters/ResourceUriParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -368,6 +368,13 @@
     }
   },
   "parameters": {
+    "ApiVersionParameter": {
+      "name": "api-version",
+      "in": "query",
+      "required": true,
+      "type": "string",
+      "description": "Client Api Version."
+    },
     "ResourceUriParameter": {
       "name": "resourceUri",
       "in": "path",

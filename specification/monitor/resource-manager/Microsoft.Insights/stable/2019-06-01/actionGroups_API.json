@@ -62,10 +62,10 @@
             "description": "The action group to create or use for the update."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -105,10 +105,10 @@
             "$ref": "#/parameters/ActionGroupNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -142,10 +142,10 @@
             "$ref": "#/parameters/ActionGroupNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -168,7 +168,7 @@
         "operationId": "ActionGroups_Update",
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -177,7 +177,7 @@
             "$ref": "#/parameters/ActionGroupNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "name": "actionGroupPatch",
@@ -224,10 +224,10 @@
         },
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -263,10 +263,10 @@
             "$ref": "#/parameters/ResourceGroupNameParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -311,10 +311,10 @@
             "description": "The receiver to re-enable."
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/SubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -335,7 +335,7 @@
     }
   },
   "definitions": {
-    "AzureResource": {
+    "Resource": {
       "properties": {
         "id": {
           "type": "string",
@@ -351,16 +351,6 @@
           "type": "string",
           "readOnly": true,
           "description": "Azure resource type"
-        },
-        "kind": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Azure resource kind"
-        },
-        "identity": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Azure resource identity"
         },
         "location": {
           "type": "string",
@@ -387,7 +377,7 @@
       "description": "An action group resource.",
       "allOf": [
         {
-          "$ref": "#/definitions/AzureResource"
+          "$ref": "#/definitions/Resource"
         }
       ],
       "properties": {
@@ -516,7 +506,6 @@
         },
         "useCommonAlertSchema": {
           "type": "boolean",
-          "default": false,
           "description": "Indicates whether to use common alert schema."
         },
         "status": {
@@ -527,7 +516,8 @@
       },
       "required": [
         "name",
-        "emailAddress"
+        "emailAddress",
+        "useCommonAlertSchema"
       ]
     },
     "SmsReceiver": {
@@ -570,7 +560,6 @@
         },
         "useCommonAlertSchema": {
           "type": "boolean",
-          "default": false,
           "description": "Indicates whether to use common alert schema."
         },
         "useAadAuth": {
@@ -593,7 +582,8 @@
       },
       "required": [
         "name",
-        "serviceUri"
+        "serviceUri",
+        "useCommonAlertSchema"
       ]
     },
     "ItsmReceiver": {
@@ -674,7 +664,6 @@
         },
         "useCommonAlertSchema": {
           "type": "boolean",
-          "default": false,
           "description": "Indicates whether to use common alert schema."
         }
       },
@@ -682,7 +671,8 @@
         "automationAccountId",
         "runbookName",
         "webhookResourceId",
-        "isGlobalRunbook"
+        "isGlobalRunbook",
+        "useCommonAlertSchema"
       ]
     },
     "VoiceReceiver": {
@@ -724,14 +714,14 @@
         },
         "useCommonAlertSchema": {
           "type": "boolean",
-          "default": false,
           "description": "Indicates whether to use common alert schema."
         }
       },
       "required": [
         "name",
         "resourceId",
-        "callbackUrl"
+        "callbackUrl",
+        "useCommonAlertSchema"
       ]
     },
     "AzureFunctionReceiver": {
@@ -755,7 +745,6 @@
         },
         "useCommonAlertSchema": {
           "type": "boolean",
-          "default": false,
           "description": "Indicates whether to use common alert schema."
         }
       },
@@ -763,7 +752,8 @@
         "name",
         "functionAppResourceId",
         "functionName",
-        "httpTriggerUrl"
+        "httpTriggerUrl",
+        "useCommonAlertSchema"
       ]
     },
     "ArmRoleReceiver": {
@@ -779,13 +769,13 @@
         },
         "useCommonAlertSchema": {
           "type": "boolean",
-          "default": false,
           "description": "Indicates whether to use common alert schema."
         }
       },
       "required": [
         "name",
-        "roleId"
+        "roleId",
+        "useCommonAlertSchema"
       ]
     },
     "ReceiverStatus": {
@@ -855,6 +845,13 @@
     }
   },
   "parameters": {
+    "SubscriptionIdParameter": {
+      "name": "subscriptionId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "The Azure subscription Id."
+    },
     "ResourceGroupNameParameter": {
       "name": "resourceGroupName",
       "in": "path",
@@ -870,6 +867,13 @@
       "type": "string",
       "description": "The name of the action group.",
       "x-ms-parameter-location": "method"
+    },
+    "ApiVersionParameter": {
+      "name": "api-version",
+      "in": "query",
+      "required": true,
+      "type": "string",
+      "description": "Client Api Version."
     }
   }
 }

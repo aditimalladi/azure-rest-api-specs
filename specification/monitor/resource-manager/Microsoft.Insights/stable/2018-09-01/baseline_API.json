@@ -36,7 +36,7 @@
     }
   },
   "paths": {
-    "/{resourceUri}/providers/Microsoft.Insights/baseline/{metricName}": {
+    "/{resourceUri}/providers/microsoft.insights/baseline/{metricName}": {
       "get": {
         "tags": [
           "Baseline"
@@ -66,7 +66,7 @@
             "$ref": "#/parameters/BaselineResultTypeParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "$ref": "#/parameters/MetricNamespaceParameter"
@@ -103,7 +103,7 @@
         }
       }
     },
-    "/{resourceUri}/providers/Microsoft.Insights/baseline": {
+    "/{resourceUri}/providers/microsoft.insights/baseline": {
       "get": {
         "tags": [
           "Baseline"
@@ -133,7 +133,7 @@
             "$ref": "#/parameters/BaselineResultTypeParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           },
           {
             "$ref": "#/parameters/MetricNamespaceParameter"
@@ -230,61 +230,6 @@
           "readOnly": true,
           "description": "The name and the display name of the metric, i.e. it is localizable string."
         },
-        "timestamps": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "date-time",
-            "description": "The timestamp for the baseline value in ISO 8601 format."
-          },
-          "description": "The array of timestamps of the baselines."
-        },
-        "baseline": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Baseline"
-          },
-          "description": "The baseline values for each sensitivity."
-        },
-        "metdata": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/BaselineMetadataValue"
-          },
-          "description": "The baseline metadata values."
-        },
-        "predictionResultType": {
-          "type": "integer",
-          "format": "int32",
-          "enum": [
-            0,
-            1,
-            2
-          ],
-          "x-ms-enum": {
-            "name": "PredictionResultType",
-            "modelAsString": false
-          },
-          "description": "The prediction result type of the baseline."
-        },
-        "errorType": {
-          "type": "integer",
-          "format": "int32",
-          "enum": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            100,
-            200
-          ],
-          "x-ms-enum": {
-            "name": "ErrorType",
-            "modelAsString": false
-          },
-          "description": "The error type of the baseline."
-        },
         "properties": {
           "x-ms-client-flatten": true,
           "$ref": "#/definitions/BaselineProperties",
@@ -308,10 +253,28 @@
           "type": "string",
           "description": "The aggregation type of the metric."
         },
-        "internalOperationId": {
-          "type": "string",
-          "readOnly": true,
-          "description": "internal operation id"
+        "timestamps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp for the baseline value in ISO 8601 format."
+          },
+          "description": "The array of timestamps of the baselines."
+        },
+        "baseline": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Baseline"
+          },
+          "description": "The baseline values for each sensitivity."
+        },
+        "metadata": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BaselineMetadataValue"
+          },
+          "description": "The baseline metadata values."
         }
       },
       "description": "The baseline properties class."
@@ -349,47 +312,6 @@
             "description": "A single high threshold value."
           },
           "description": "The high thresholds of the baseline."
-        },
-        "timestamps": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "date-time",
-            "description": "the timestamp for the baseline value in ISO 8601 format."
-          },
-          "description": "the array of timestamps of the baselines."
-        },
-        "PredictionResultType": {
-          "type": "integer",
-          "format": "int32",
-          "enum": [
-            0,
-            1,
-            2
-          ],
-          "x-ms-enum": {
-            "name": "PredictionResultType",
-            "modelAsString": false
-          },
-          "description": "The prediction result type of the baseline."
-        },
-        "ErrorType": {
-          "type": "integer",
-          "format": "int32",
-          "enum": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            100,
-            200
-          ],
-          "x-ms-enum": {
-            "name": "ErrorType",
-            "modelAsString": false
-          },
-          "description": "The error type of the baseline."
         }
       },
       "required": [
@@ -440,7 +362,7 @@
       "in": "query",
       "required": false,
       "type": "string",
-      "description": "The names of the metrics (comma separated) to retrieve. Special case: If a metricname itself has a comma in it then use %2 to indicate it. Eg: 'Metric,Name1' should be **'Metric%2Name1'**",
+      "description": "The names of the metrics (comma separated) to retrieve.",
       "x-ms-parameter-location": "method"
     },
     "AggregationParameter": {
@@ -474,6 +396,13 @@
       "description": "Allows retrieving only metadata of the baseline. On data request all information is retrieved.",
       "x-ms-parameter-location": "method",
       "required": false
+    },
+    "ApiVersionParameter": {
+      "name": "api-version",
+      "in": "query",
+      "required": true,
+      "type": "string",
+      "description": "Client Api Version."
     },
     "MetricNamespaceParameter": {
       "name": "metricnamespace",

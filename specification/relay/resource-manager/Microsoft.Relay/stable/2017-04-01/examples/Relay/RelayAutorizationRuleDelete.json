@@ -1,11 +1,11 @@
 {
   "parameters": {
-    "namespaceName": "example-RelayNamespace-01",
-    "relayName": "example-Relay-wcf-01",
-    "authorizationRuleName": "example-RelayAuthRules-01",
-    "resourceGroupName": "resourcegroup",
+    "namespaceName": "sdk-RelayNamespace-01",
+    "relayName": "sdk-Relay-wcf-01",
+    "authorizationRuleName": "sdk-RelayAuthRules-01",
+    "resourceGroupName": "RG-eg",
     "api-version": "2017-04-01",
-    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+    "subscriptionId": "8c246e6a-cbc6-4a87-aff1-d6a886f376ef"
   },
   "responses": {
     "200": {},

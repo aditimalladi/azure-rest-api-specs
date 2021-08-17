@@ -57,7 +57,7 @@
                 "properties": {
                   "server": "serverName",
                   "database": "databaseName",
-                  "user": "<user>",
+                  "user": "userName",
                   "password": "userPassword",
                   "table": "tableName"
                 }

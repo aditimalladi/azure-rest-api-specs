@@ -26,9 +26,7 @@
             "totalNewStatus": 42,
             "totalInProgressStatus": 30,
             "totalResolvedStatus": 2,
-            "totalDismissedStatus": 1,
-            "totalTruePositiveStatus": 7,
-            "totalFalsePositiveStatus": 0
+            "totalDismissedStatus": 1
           }
         }
       }

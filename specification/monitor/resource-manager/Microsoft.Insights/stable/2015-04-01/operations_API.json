@@ -36,7 +36,7 @@
     }
   },
   "paths": {
-    "/providers/Microsoft.Insights/operations": {
+    "/providers/microsoft.insights/operations": {
       "get": {
         "tags": [
           "Operations"
@@ -50,7 +50,7 @@
         },
         "parameters": [
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -107,6 +107,15 @@
           }
         }
       }
+    }
+  },
+  "parameters": {
+    "ApiVersionParameter": {
+      "name": "api-version",
+      "in": "query",
+      "required": true,
+      "type": "string",
+      "description": "Client Api Version."
     }
   }
 }

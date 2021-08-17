@@ -4,7 +4,7 @@
     "version": "2015-12-01-preview",
     "title": "Compute Admin Client"
   },
-  "host": "management.azure.com",
+  "host": "adminmanagement.local.azurestack.external",
   "schemes": [
     "https"
   ],
@@ -45,7 +45,7 @@
             "$ref": "Compute.json#/parameters/VersionParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Compute.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -53,12 +53,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/VMExtension"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "Compute.json#/definitions/CrpErrorResponse"
             }
           }
         }
@@ -98,7 +92,7 @@
             "$ref": "Compute.json#/parameters/VersionParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Compute.json#/parameters/ApiVersionParameter"
           },
           {
             "$ref": "#/parameters/VMExtensionParameter"
@@ -115,12 +109,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/VMExtension"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "Compute.json#/definitions/CrpErrorResponse"
             }
           }
         }
@@ -160,18 +148,12 @@
             "$ref": "Compute.json#/parameters/VersionParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Compute.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "Compute.json#/definitions/CrpErrorResponse"
-            }
           }
         }
       }
@@ -203,7 +185,7 @@
             "$ref": "Compute.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+            "$ref": "Compute.json#/parameters/ApiVersionParameter"
           }
         ],
         "responses": {
@@ -211,12 +193,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/VMExtensionList"
-            }
-          },
-          "default": {
-            "description": "Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).",
-            "schema": {
-              "$ref": "Compute.json#/definitions/CrpErrorResponse"
             }
           }
         }
@@ -236,7 +212,7 @@
       },
       "allOf": [
         {
-          "$ref": "Compute.json#/definitions/CrpResource"
+          "$ref": "Compute.json#/definitions/Resource"
         }
       ]
     },
@@ -247,10 +223,6 @@
         "vmOsType": {
           "description": "Target virtual machine operating system type necessary for deploying the extension handler.",
           "$ref": "PlatformImages.json#/definitions/OsType"
-        },
-        "publisher": {
-          "description": "The publisher of the VM Extension",
-          "type": "string"
         },
         "computeRole": {
           "description": "Compute role",

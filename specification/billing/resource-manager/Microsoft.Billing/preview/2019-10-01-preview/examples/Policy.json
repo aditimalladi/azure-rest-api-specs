@@ -13,7 +13,7 @@
         "properties": {
           "marketplacePurchases": "AllAllowed",
           "reservationPurchases": "Allowed",
-          "viewCharges": "Allowed"
+          "viewCharges": "SubscriptionOwner"
         }
       }
     }

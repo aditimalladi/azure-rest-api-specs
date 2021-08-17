@@ -7,9 +7,7 @@
     "shareSubscriptionSynchronization": {
       "synchronizationId": "7d0536a6-3fa5-43de-b152-3d07c4f6b2bb"
     },
-    "api-version": "2018-11-01-preview",
-    "filter": "name eq 'datasetmapping1'",
-    "orderBy": "durationMs"
+    "api-version": "2018-11-01-preview"
   },
   "responses": {
     "200": {
@@ -27,7 +25,7 @@
             "startTime": "2018-11-14T04:47:52.9614956Z",
             "durationMs": 2000,
             "status": "Completed",
-            "name": "datasetmapping1",
+            "name": "dataset1",
             "dataSetId": "7d0536a6-3fa5-43de-b152-3d07c4f6b2bb",
             "dataSetType": "Blob"
           }

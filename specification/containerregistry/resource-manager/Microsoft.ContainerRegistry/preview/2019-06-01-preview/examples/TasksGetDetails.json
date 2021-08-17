@@ -89,9 +89,7 @@
               }
             },
             "sourceRegistry": null
-          },
-          "isSystemTask": false,
-          "logTemplate": null
+          }
         },
         "location": "eastus",
         "identity": {

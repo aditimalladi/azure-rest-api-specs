@@ -12,7 +12,7 @@
           "properties": {
             "server": "someServer",
             "database": "someDatabase",
-            "user": "<user>",
+            "user": "someUser",
             "password": "somePassword",
             "table": "someTable"
           }

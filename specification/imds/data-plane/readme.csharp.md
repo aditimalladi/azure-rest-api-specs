@@ -8,7 +8,7 @@ This is the AutoRest configuration file for IMDS.
 
 ``` yaml $(csharp)
 csharp:
-  azure-arm: false
+  azure-arm: true
   license-header: MICROSOFT_MIT_NO_VERSION  
   clear-output-folder: true
 ```

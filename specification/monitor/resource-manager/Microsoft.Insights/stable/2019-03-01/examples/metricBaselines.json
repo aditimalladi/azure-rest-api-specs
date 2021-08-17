@@ -24,7 +24,7 @@
                 {
                   "aggregation": "average",
                   "dimensions": [],
-                  "metadataValues": [
+                  "metadata": [
                     {
                       "name": "ErrorType",
                       "value": "TooManyAnomalies"

@@ -43,7 +43,7 @@
         "description": "List all the existing Smart Detector alert rules within the subscription.",
         "parameters": [
           {
-            "$ref": "#/parameters/subscriptionId"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -56,7 +56,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/SmartDetectorErrorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "200": {
@@ -85,7 +85,7 @@
         "description": "List all the existing Smart Detector alert rules within the subscription and resource group.",
         "parameters": [
           {
-            "$ref": "#/parameters/subscriptionId"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -101,7 +101,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/SmartDetectorErrorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "200": {
@@ -130,7 +130,7 @@
         "description": "Get a specific Smart Detector alert rule.",
         "parameters": [
           {
-            "$ref": "#/parameters/subscriptionId"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -149,7 +149,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/SmartDetectorErrorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "200": {
@@ -173,7 +173,7 @@
         "description": "Create or update a Smart Detector alert rule.",
         "parameters": [
           {
-            "$ref": "#/parameters/subscriptionId"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -198,7 +198,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/SmartDetectorErrorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "200": {
@@ -228,7 +228,7 @@
         "description": "Patch a specific Smart Detector alert rule.",
         "parameters": [
           {
-            "$ref": "#/parameters/subscriptionId"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -253,7 +253,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/SmartDetectorErrorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "200": {
@@ -277,7 +277,7 @@
         "description": "Delete an existing Smart Detector alert rule.",
         "parameters": [
           {
-            "$ref": "#/parameters/subscriptionId"
+            "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
             "$ref": "#/parameters/ResourceGroupNameParameter"
@@ -293,7 +293,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/SmartDetectorErrorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           },
           "200": {
@@ -312,7 +312,7 @@
     }
   },
   "definitions": {
-    "SmartDetectorErrorResponse": {
+    "ErrorResponse": {
       "description": "Describe the format of an Error response.",
       "type": "object",
       "properties": {
@@ -384,10 +384,7 @@
         },
         "tags": {
           "type": "object",
-          "description": "The resource tags.",
-          "additionalProperties": {
-            "type": "string"
-          }
+          "description": "The resource tags."
         }
       },
       "x-ms-azure-resource": true,
@@ -443,10 +440,7 @@
         },
         "tags": {
           "type": "object",
-          "description": "The resource tags.",
-          "additionalProperties": {
-            "type": "string"
-          }
+          "description": "The resource tags."
         },
         "properties": {
           "x-ms-client-flatten": true,
@@ -617,7 +611,7 @@
     }
   },
   "parameters": {
-    "subscriptionId": {
+    "SubscriptionIdParameter": {
       "name": "subscriptionId",
       "in": "path",
       "required": true,

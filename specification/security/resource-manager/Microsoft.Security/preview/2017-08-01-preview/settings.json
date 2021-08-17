@@ -172,6 +172,17 @@
         }
       }
     },
+    "Setting": {
+      "type": "object",
+      "description": "Represents a security setting in Azure Security Center.",
+      "discriminator": "kind",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/SettingResource"
+        }
+      ]
+    },
     "DataExportSetting": {
       "type": "object",
       "description": "Represents a data export setting",
@@ -189,7 +200,7 @@
         }
       ]
     },
-    "Setting": {
+    "SettingResource": {
       "type": "object",
       "description": "The kind of the security setting",
       "properties": {
@@ -214,7 +225,6 @@
           }
         }
       },
-      "discriminator": "kind",
       "required": [
         "kind"
       ],

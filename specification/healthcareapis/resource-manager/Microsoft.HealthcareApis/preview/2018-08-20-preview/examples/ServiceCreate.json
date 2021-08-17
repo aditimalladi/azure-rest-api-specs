@@ -5,7 +5,7 @@
     "api-version": "2018-08-20-preview",
     "subscriptionId": "subid",
     "serviceDescription": {
-      "location": "eastus",
+      "location": "westus",
       "tags": {},
       "kind": "fhir",
       "properties": {
@@ -21,7 +21,7 @@
           "offerThroughput": 1000
         },
         "authenticationConfiguration": {
-          "authority": "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+          "authority": "https://login.microsoftonline.com/common",
           "audience": "https://azurehealthcareapis.com",
           "smartProxyEnabled": true
         },
@@ -43,9 +43,6 @@
           "maxAge": 1440,
           "allowCredentials": false
         }
-      },
-      "identity": {
-        "type": "SystemAssigned"
       }
     }
   },
@@ -54,7 +51,7 @@
       "body": {
         "id": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service1",
         "name": "service1",
-        "location": "eastus",
+        "location": "West US",
         "type": "Microsoft.HealthcareApis/services",
         "kind": "fhir",
         "etag": "etagvalue",
@@ -73,7 +70,7 @@
             "offerThroughput": 1000
           },
           "authenticationConfiguration": {
-            "authority": "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+            "authority": "https://login.microsoftonline.com/common",
             "audience": "https://azurehealthcareapis.com",
             "smartProxyEnabled": true
           },
@@ -95,11 +92,6 @@
             "maxAge": 1440,
             "allowCredentials": false
           }
-        },
-        "identity": {
-          "principalId": "03fe6ae0-952c-4e4b-954b-cc0364dd252e",
-          "tenantId": "72f988bf-86f1-41af-91ab-2d8cd011db47",
-          "type": "SystemAssigned"
         }
       }
     },
@@ -126,7 +118,7 @@
             "offerThroughput": 1000
           },
           "authenticationConfiguration": {
-            "authority": "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+            "authority": "https://login.microsoftonline.com/common",
             "audience": "https://azurehealthcareapis.com",
             "smartProxyEnabled": true
           },
@@ -148,11 +140,6 @@
             "maxAge": 1440,
             "allowCredentials": false
           }
-        },
-        "identity": {
-          "principalId": "03fe6ae0-952c-4e4b-954b-cc0364dd252e",
-          "tenantId": "72f988bf-86f1-41af-91ab-2d8cd011db47",
-          "type": "SystemAssigned"
         }
       }
     }

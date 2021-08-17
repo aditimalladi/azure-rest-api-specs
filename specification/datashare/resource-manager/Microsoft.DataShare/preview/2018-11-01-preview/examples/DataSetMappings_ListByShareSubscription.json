@@ -4,9 +4,7 @@
     "resourceGroupName": "SampleResourceGroup",
     "accountName": "Account1",
     "shareSubscriptionName": "ShareSubscription1",
-    "api-version": "2018-11-01-preview",
-    "filter": "name eq 'DatasetMapping1'",
-    "orderBy": "name"
+    "api-version": "2018-11-01-preview"
   },
   "responses": {
     "200": {
@@ -22,7 +20,6 @@
           {
             "kind": "Blob",
             "properties": {
-              "dataSetId": "a08f184b-0567-4b11-ba22-a1199336d226",
               "storageAccountName": "storage2",
               "filePath": "file21",
               "containerName": "C1",
@@ -31,12 +28,11 @@
             },
             "id": "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/dataSetMappings/DatasetMapping1",
             "name": "DatasetMapping1",
-            "type": "Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings"
+            "type": "Microsoft.DataShare/DataSetMapping"
           },
           {
             "kind": "Blob",
             "properties": {
-              "dataSetId": "a08f184b-0567-4b11-ba22-a1199336d227",
               "storageAccountName": "storage2",
               "filePath": "file21",
               "containerName": "C1",
@@ -45,7 +41,7 @@
             },
             "id": "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/dataSetMappings/DatasetMapping1",
             "name": "DatasetMapping1",
-            "type": "Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings"
+            "type": "Microsoft.DataShare/DataSetMapping"
           }
         ]
       }

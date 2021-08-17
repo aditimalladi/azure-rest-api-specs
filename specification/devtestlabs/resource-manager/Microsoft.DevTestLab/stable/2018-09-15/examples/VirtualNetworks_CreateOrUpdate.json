@@ -1,14 +1,14 @@
 {
   "parameters": {
+    "subscriptionId": "{subscription-id}",
+    "resourceGroupName": "myResourceGroup",
+    "labName": "{devtestlab-name}",
+    "name": "{virtualnetwork-name}",
     "api-version": "2018-09-15",
-    "subscriptionId": "{subscriptionId}",
-    "resourceGroupName": "resourceGroupName",
-    "labName": "{labName}",
-    "name": "{virtualNetworkName}",
     "virtualNetwork": {
-      "location": "{location}",
+      "location": "{azure-location}",
       "tags": {
-        "tagName1": "tagValue1"
+        "MyTag": "MyValue"
       }
     }
   },
@@ -18,13 +18,13 @@
         "properties": {
           "createdDate": "2018-10-01T13:01:44.6005134-07:00",
           "provisioningState": "Creating",
-          "uniqueIdentifier": "{uniqueIdentifier}"
+          "uniqueIdentifier": "{unique-identifier}"
         },
-        "id": "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualnetworks/{virtualNetworkName}",
-        "name": "{virtualNetworkName}",
+        "id": "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
+        "name": "{virtualnetwork-name}",
         "type": "Microsoft.DevTestLab/labs/virtualNetworks",
         "tags": {
-          "tagName1": "tagValue1"
+          "MyTag": "MyValue"
         }
       }
     },
@@ -33,13 +33,13 @@
         "properties": {
           "createdDate": "2018-10-01T13:01:44.6005134-07:00",
           "provisioningState": "Creating",
-          "uniqueIdentifier": "{uniqueIdentifier}"
+          "uniqueIdentifier": "{unique-identifier}"
         },
-        "id": "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualnetworks/{virtualNetworkName}",
-        "name": "{virtualNetworkName}",
+        "id": "/subscriptions/{subscription-id}/resourcegroups/myResourceGroup/providers/microsoft.devtestlab/labs/{devtestlab-name}/virtualnetworks/{virtualnetwork-name}",
+        "name": "{virtualnetwork-name}",
         "type": "Microsoft.DevTestLab/labs/virtualNetworks",
         "tags": {
-          "tagName1": "tagValue1"
+          "MyTag": "MyValue"
         }
       }
     }

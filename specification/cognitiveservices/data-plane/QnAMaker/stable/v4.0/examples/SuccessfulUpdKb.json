@@ -48,6 +48,9 @@
               "add": [],
               "delete": []
             },
+            "alternateQuestionClusters": {
+              "delete": []
+            },
             "context": {
               "isContextOnly": false,
               "promptsToAdd": [
@@ -62,6 +65,7 @@
                       "How can I add prompts?"
                     ],
                     "metadata": [],
+                    "alternateQuestionClusters": [],
                     "context": {
                       "isContextOnly": false,
                       "prompts": []
@@ -80,6 +84,7 @@
                       "How can I delete delete prompts?"
                     ],
                     "metadata": [],
+                    "alternateQuestionClusters": [],
                     "context": {
                       "isContextOnly": false,
                       "prompts": []
@@ -120,6 +125,9 @@
                   "value": "programmatic"
                 }
               ]
+            },
+            "alternateQuestionClusters": {
+              "delete": []
             },
             "context": {
               "isContextOnly": false,
